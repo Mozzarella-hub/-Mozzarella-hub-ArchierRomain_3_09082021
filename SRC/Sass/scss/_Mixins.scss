@@ -1,0 +1,51 @@
+/*PLACEMENT*/
+@mixin PositionCenter {
+    display: flex;
+    align-items: center;   
+    width: $total; 
+}
+
+@mixin DirectionColoumn {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin DirectionRow {
+    @include PositionCenter;
+    flex-direction: row;
+}
+
+
+/*FONT-size-style-family-weight*/
+
+@mixin font-bold {
+   font-family: $font-texte;
+   font-weight: bold;
+   color: $black;
+   font-size: x-large;
+}
+
+
+/*CLASS ID IMPORTANT*/
+@mixin logo{
+    font-family: 'Shrikhand', cursive;
+    font-size: 5vh;
+    color: $black;
+    }
+
+
+
+@mixin btn {
+    background-color: $color-secondary;
+    border-radius: 100px;
+    padding: 2rem;
+    background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+    cursor: pointer;
+    transition-duration: .25s;
+    box-shadow: .25rem .25rem 10px rgba(0,0,0,.25);
+    text-align: center;
+    &:hover{
+        background-color: #fff;
+    box-shadow: .25rem .25rem 10px rgba(0,0,0,.5);
+    }   
+}
