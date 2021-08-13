@@ -28,9 +28,10 @@
 
 /*CLASS ID IMPORTANT*/
 @mixin logo{
-    font-family: 'Shrikhand', cursive;
+    font-family: "Shrikhand", "cursive";
     font-size: 5vh;
     color: $black;
+    font-weight: 900;
     }
 
 
@@ -48,4 +49,24 @@
         background-color: #fff;
     box-shadow: .25rem .25rem 10px rgba(0,0,0,.5);
     }   
+}
+
+@mixin emot-marker {
+    counter-increment: compteListe 1;
+    content: counter(compteListe) " ";
+    background:$color-secondary;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 100px;
+    @include PositionCenter();
+    justify-content: center;
+    color: $white;
+    position: absolute;
+    left: -.75rem;
+}
+
+
+@mixin DirectionLeft {
+    @include PositionCenter();
+    justify-content: left;
 }
