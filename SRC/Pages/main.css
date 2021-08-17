@@ -1,3 +1,4 @@
+@import url(_Variables.scss);
 /*PLACEMENT*/
 /*FONT-size-style-family-weight*/
 /*CLASS ID IMPORTANT*/
@@ -132,7 +133,6 @@ body, html {
   background-image: linear-gradient(0deg, #9356DC, #FF79DA);
   background-color: #686868;
   cursor: pointer;
-  cursor: pointer;
   -webkit-transition-duration: .25s;
           transition-duration: .25s;
   -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
@@ -162,8 +162,9 @@ body, html {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #ffffff;
-  padding: 2rem 1rem;
+  padding: 8%;
   /*FIN OL*/
+  /*fin parent-ol*/
   /*li-section2*/
 }
 
@@ -180,19 +181,43 @@ body, html {
 }
 
 .section-2 .ol {
-  display: none;
+  counter-reset: Choix;
+  /* Creates a new instance of the
+                                            section counter with each ol
+                                            element */
+  list-style-type: none;
 }
 
-.section-2 .ol-fonctions {
+.section-2 li::before {
+  counter-increment: Choix 1;
+  /* Increments only this instance
+                                            of the section counter */
+  content: counters(Choix, "");
+  /* Combines the values of all instances
+                                            of the section counter, separated
+                                            by a period */
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: auto;
-  counter-reset: 3fonctions;
-  margin: 0px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #ffffff;
+  background: #9356DC;
+  margin-left: -10%;
+  margin-right: 5%;
+}
+
+.section-2 .parent-ol {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .section-2 .li-section2 {
@@ -206,15 +231,15 @@ body, html {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding: 1.5rem;
-  margin: 0 0 1rem .75rem;
-  padding-left: 0px;
+  margin: 0 0 1rem 0rem;
   -webkit-box-shadow: 0.25rem 0.25rem 0.5rem;
           box-shadow: 0.25rem 0.25rem 0.5rem;
   border-radius: 1.25rem;
   background-color: #f6f6f6;
   display: flex;
   position: relative;
+  margin-left: 0px;
+  padding: 3%;
   /*END txt-li*/
   /*FIN tuto__icon*/
 }
@@ -222,11 +247,19 @@ body, html {
 .section-2 .li-section2 .txt-li {
   font-weight: "Roboto", "sans-serif";
   color: #000000;
-  font-size: 2vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .section-2 .li-section2 .tuto__icon {
-  margin-right: 1rem;
+  margin-right: 2rem;
   color: #7e7e7e;
 }
 
@@ -235,6 +268,10 @@ body, html {
   background-color: #f0dede7a;
   padding: 2%;
   /*FIN contenaire-restaurants*/
+  /*FIN CARD RESTO*/
+  /*fin carte img*/
+  /*FIN card-footer*/
+  /*txt-card*/
 }
 
 .section-3 .contenaire-restaurants {
@@ -249,11 +286,9 @@ body, html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: auto;
-  /*FIN CARD RESTO*/
 }
 
-.section-3 .contenaire-restaurants .card-resto {
+.section-3 .card-resto {
   background-color: #ffffff;
   border-radius: 1rem;
   position: relative;
@@ -270,11 +305,9 @@ body, html {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 97%;
-  /*FIN card-img*/
-  /*FIN card-footer*/
 }
 
-.section-3 .contenaire-restaurants .card-resto .img-resto {
+.section-3 .img-resto {
   border-radius: 1rem 1rem 0 0;
   width: 100%;
   height: 12em;
@@ -282,14 +315,14 @@ body, html {
      object-fit: cover;
 }
 
-.section-3 .contenaire-restaurants .card-resto .card-img {
+.section-3 .card-img {
   width: auto;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
-.section-3 .contenaire-restaurants .card-resto .card-img .card-badge {
+.section-3 .card-badge {
   border-radius: .125rem;
   position: absolute;
   top: 1rem;
@@ -299,62 +332,150 @@ body, html {
   padding: .5rem;
 }
 
-.section-3 .contenaire-restaurants .card-resto .card-footer {
+.section-3 .card-footer {
   padding: 1rem;
   position: relative;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
-  /*txt-card*/
 }
 
-.section-3 .contenaire-restaurants .card-resto .card-footer .txt-card {
+.section-3 .txt-card {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   padding: 1em;
 }
 
-.section-3 .contenaire-restaurants .card-resto .card-footer .card-title {
+.section-3 .card-title {
   font-weight: bold;
   color: #000000;
   font-weight: 700;
 }
 
-.section-3 .contenaire-restaurants .card-resto .card-footer .emote-card {
+.section-3 .emote-card {
+  height: 2rem;
+  width: 2rem;
+  background-color: transparent;
+  border: 0 solid transparent;
+  padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 2rem;
-  width: 2rem;
-  background-color: transparent;
-  border: 0 solid transparent;
-  padding: 0;
-  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   cursor: pointer;
   position: relative;
-  background-color: #000000;
+  background-color: #000;
+}
+
+.section-3 .emote-card ::before {
+  opacity: 0;
+  -webkit-transition: .5s;
+  transition: .5s;
+  content: "";
+  background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), to(#ff79da));
+  background: linear-gradient(0deg, #9356dc, #ff79da);
+}
+
+.section-3 .emote-card .menu-like_vide {
+  -webkit-transition-duration: .25s;
+          transition-duration: .25s;
+  background-color: #f6f6f6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  mix-blend-mode: lighten;
+}
+
+.section-3 .emote-card .menu-like_plein {
+  -webkit-transition-duration: .25s;
+          transition-duration: .25s;
+  background-color: #f6f6f6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  mix-blend-mode: lighten;
 }
 
 /*FIN SECTION3*/
 .footer {
-  background-color: black;
-  color: white;
-  font-weight: 700;
+  background-color: #575757;
+  color: #ffffff;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem;
+}
+
+.footer .ul-footer {
+  background-color: #000000;
+  color: #ffffff;
+  margin: .5rem 0;
+}
+
+.footer .li-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /*fin footer*/
+.logo-footer {
+  font-family: "Shrikhand", "cursive";
+  font-size: 1.2rem;
+  margin: 0 0 1rem;
+}
+
 .li {
-  list-style: none;
+  display: none;
+}
+
+* {
+  padding: 0;
+}
+
+a:link {
+  text-decoration: none;
+  color: #000000;
 }
 /*# sourceMappingURL=main.css.map */
