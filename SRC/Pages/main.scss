@@ -1,0 +1,239 @@
+@import "Mixins";
+@import "Variables";
+
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+$white: #ffffff;
+$gris:#f5f5f587;
+$black:#000000;
+
+/*FONT-size-style-family-weight*/
+$font-texte: 'Roboto', 'sans-serif';
+$font-logo:"Shrikhand", "cursive";
+
+/*TAILLE*/
+$total: 100%;
+$oklm: auto;
+
+body, html {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+  }
+
+.dimsension-logo{
+    @include PositionCenter;
+    justify-content: center;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+    z-index: 1000;
+    position: relative;
+    #logo{
+        @include logo;
+        @include PositionCenter;
+        justify-content: center;
+        font-size: 2em;
+    }
+}/*END dimsension-logo*/
+
+
+
+
+.dimension-localisation
+{
+    @include DirectionRow;
+    padding: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    justify-content: center;
+    padding: 1.25rem 1rem;
+    background-color: #f3f3f3;
+    width: $oklm;
+    .epingle {
+        width: 2em;
+    }
+    .texte-localisation{
+        font-family: $font-texte;
+    }
+}/*END dimension-localisation*/
+
+.section-1
+{
+    @include DirectionColoumn;
+    @include PositionCenter;
+    background-color: $gris;
+    padding: 2rem;
+    padding-top: inherit;
+    width: $oklm;
+    text-align: center;
+
+    .dimension-txt-section1{
+       @include DirectionColoumn;
+       @include PositionCenter;
+
+        .txt-bold-section{
+            @include font-bold;
+            }/*fin txt-bold-section*/
+        
+        .txt-normal-section1{
+            font-family: $font-texte;
+            font-size: large;
+            font-weight: 300;
+            }/*fin txt-normal-section1*/
+    }/*FIN dimension-txt-section1*/
+
+
+    .btn{   
+      @include btn;
+      font-family: $font-texte;
+      width: $oklm;
+      color:$white;
+        padding: 0.75rem 1.5rem;
+        font-weight: 500;
+    }/*FIN BTN SECT1*/
+
+}/*FIN SECTION-1*/
+
+
+.section-2
+{
+    @include DirectionColoumn;
+    background-color: $white;
+    padding: 2rem 1rem;
+    .h2-left_mixin{
+        @include DirectionLeft
+    }
+    
+    .ol{
+        display: none;
+    }
+
+    .ol-fonctions{
+        display: flex;
+        width: $oklm;
+        counter-reset: 3fonctions;
+        margin: 0px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }/*FIN OL*/
+
+   .li-section2 {
+       @include DirectionRow;
+       padding: 1.5rem;
+       margin: 0 0 1rem .75rem;
+       padding-left: 0px;
+       box-shadow: 0.25rem 0.25rem 0.5rem ;
+       border-radius: 1.25rem;
+       background-color: #f6f6f6;
+       display: flex;
+       position: relative;
+
+       .txt-li{
+           font-weight: $font-texte;
+           color: $black;
+           font-size: 2vh;
+        }/*END txt-li*/
+
+        .tuto__icon {
+            margin-right: 1rem;
+            color: #7e7e7e;
+
+            }/*FIN tuto__icon*/
+        
+    }/*li-section2*/
+
+}/*FIN SECTION 2*/
+
+
+
+.section-3{
+    background-color: #f0dede7a;
+    padding: 2%;
+    .contenaire-restaurants{
+        @include DirectionColoumn;
+        @include PositionCenter;
+        width: auto;
+        
+
+        .card-resto{
+            background-color: $white;
+            border-radius: 1rem;
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin: 1rem;
+            @include DirectionColoumn;
+            width: 97%;
+
+            .img-resto{
+                border-radius: 1rem 1rem 0 0;
+                width: 100%;
+                height: 12em;
+                object-fit: cover;
+            }
+
+            .card-img{
+                width: $oklm;
+
+                justify-content: space-between;
+
+                .card-badge{
+                    border-radius: .125rem;
+                    position: absolute;
+                    top: 1rem;
+                    right: .75rem;
+                    background-color: #99e2d0;
+                    color: #1b6150;
+                    padding: .5rem;
+                }
+            }/*FIN card-img*/
+            .card-footer{
+                padding: 1rem;
+                position: relative;
+                display: flex;
+                align-items: center;
+                width: $total;
+
+                .txt-card{
+                    flex: 1;
+                    padding: 1em
+                }/*txt-card*/
+
+                .card-title{
+                    @include font-bold;
+                    font-weight: 700;
+                }
+
+                .emote-card{
+                    @include PositionCenter;
+                    height: 2rem;
+                    width: 2rem;
+                    background-color: transparent;
+                    border: 0 solid transparent;
+                    padding: 0;
+                    display: flex;
+                    justify-content: center;
+                    cursor: pointer;
+                    position: relative;
+                    background-color: $black;
+                }
+                
+
+            }/*FIN card-footer*/
+        }/*FIN CARD RESTO*/
+
+    }/*FIN contenaire-restaurants*/
+}/*FIN SECTION3*/
+
+
+.footer{
+    background-color: black;
+    color: white;
+    font-weight: 700;
+
+}/*fin footer*/
+
+.li{
+    list-style: none;
+}

@@ -1,0 +1,360 @@
+/*PLACEMENT*/
+/*FONT-size-style-family-weight*/
+/*CLASS ID IMPORTANT*/
+/*Colors*/
+/*FONT-size-style-family-weight*/
+/*TAILLE*/
+/*FONT-size-style-family-weight*/
+/*TAILLE*/
+body, html {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.dimsension-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+  position: relative;
+}
+
+.dimsension-logo #logo {
+  font-family: "Shrikhand", "cursive";
+  font-size: 5vh;
+  color: #000000;
+  font-weight: 900;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 2em;
+}
+
+/*END dimsension-logo*/
+.dimension-localisation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1.25rem 1rem;
+  background-color: #f3f3f3;
+  width: auto;
+}
+
+.dimension-localisation .epingle {
+  width: 2em;
+}
+
+.dimension-localisation .texte-localisation {
+  font-family: "Roboto", "sans-serif";
+}
+
+/*END dimension-localisation*/
+.section-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f5f5f587;
+  padding: 2rem;
+  padding-top: inherit;
+  width: auto;
+  text-align: center;
+  /*FIN dimension-txt-section1*/
+  /*FIN BTN SECT1*/
+}
+
+.section-1 .dimension-txt-section1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /*fin txt-bold-section*/
+  /*fin txt-normal-section1*/
+}
+
+.section-1 .dimension-txt-section1 .txt-bold-section {
+  font-weight: bold;
+  color: #000000;
+}
+
+.section-1 .dimension-txt-section1 .txt-normal-section1 {
+  font-family: "Roboto", "sans-serif";
+  font-size: large;
+  font-weight: 300;
+}
+
+.section-1 .btn {
+  background-color: #FF79DA;
+  border-radius: 100px;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
+  background-image: linear-gradient(0deg, #9356DC, #FF79DA);
+  background-color: #686868;
+  cursor: pointer;
+  cursor: pointer;
+  -webkit-transition-duration: .25s;
+          transition-duration: .25s;
+  -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  border-color: transparent;
+  font-family: "Roboto", "sans-serif";
+  width: auto;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+}
+
+.section-1 .btn:hover {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+}
+
+/*FIN SECTION-1*/
+.section-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #ffffff;
+  padding: 2rem 1rem;
+  /*FIN OL*/
+  /*li-section2*/
+}
+
+.section-2 .h2-left_mixin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+.section-2 .ol {
+  display: none;
+}
+
+.section-2 .ol-fonctions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: auto;
+  counter-reset: 3fonctions;
+  margin: 0px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.section-2 .li-section2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 1.5rem;
+  margin: 0 0 1rem .75rem;
+  padding-left: 0px;
+  -webkit-box-shadow: 0.25rem 0.25rem 0.5rem;
+          box-shadow: 0.25rem 0.25rem 0.5rem;
+  border-radius: 1.25rem;
+  background-color: #f6f6f6;
+  display: flex;
+  position: relative;
+  /*END txt-li*/
+  /*FIN tuto__icon*/
+}
+
+.section-2 .li-section2 .txt-li {
+  font-weight: "Roboto", "sans-serif";
+  color: #000000;
+  font-size: 2vh;
+}
+
+.section-2 .li-section2 .tuto__icon {
+  margin-right: 1rem;
+  color: #7e7e7e;
+}
+
+/*FIN SECTION 2*/
+.section-3 {
+  background-color: #f0dede7a;
+  padding: 2%;
+  /*FIN contenaire-restaurants*/
+}
+
+.section-3 .contenaire-restaurants {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: auto;
+  /*FIN CARD RESTO*/
+}
+
+.section-3 .contenaire-restaurants .card-resto {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 97%;
+  /*FIN card-img*/
+  /*FIN card-footer*/
+}
+
+.section-3 .contenaire-restaurants .card-resto .img-resto {
+  border-radius: 1rem 1rem 0 0;
+  width: 100%;
+  height: 12em;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.section-3 .contenaire-restaurants .card-resto .card-img {
+  width: auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.section-3 .contenaire-restaurants .card-resto .card-img .card-badge {
+  border-radius: .125rem;
+  position: absolute;
+  top: 1rem;
+  right: .75rem;
+  background-color: #99e2d0;
+  color: #1b6150;
+  padding: .5rem;
+}
+
+.section-3 .contenaire-restaurants .card-resto .card-footer {
+  padding: 1rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  /*txt-card*/
+}
+
+.section-3 .contenaire-restaurants .card-resto .card-footer .txt-card {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 1em;
+}
+
+.section-3 .contenaire-restaurants .card-resto .card-footer .card-title {
+  font-weight: bold;
+  color: #000000;
+  font-weight: 700;
+}
+
+.section-3 .contenaire-restaurants .card-resto .card-footer .emote-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 2rem;
+  width: 2rem;
+  background-color: transparent;
+  border: 0 solid transparent;
+  padding: 0;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  position: relative;
+  background-color: #000000;
+}
+
+/*FIN SECTION3*/
+.footer {
+  background-color: black;
+  color: white;
+  font-weight: 700;
+}
+
+/*fin footer*/
+.li {
+  list-style: none;
+}
+/*# sourceMappingURL=main.css.map */
