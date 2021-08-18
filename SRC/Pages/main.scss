@@ -133,17 +133,20 @@ li::before {
         
     }/*fin parent-ol*/
 
+    .li-section2:hover{
+        box-shadow: .25rem .25rem .5rem rgba(0, 0, 0, 0.679);
+    }
    .li-section2 {
        @include DirectionRow;
        margin: 0 0 1rem 0rem;
-       box-shadow: 0.25rem 0.25rem 0.5rem ;
        border-radius: 1.25rem;
        background-color: #f6f6f6;
        display: flex;
        position: relative;
        margin-left: 0px;
        padding: 3%;
-
+       box-shadow: .25rem .25rem .5rem rgba(0,0,0,.125);
+        
 
        .txt-li{
            font-weight: $font-texte;
@@ -184,6 +187,11 @@ li::before {
             @include DirectionColoumn;
             width: 97%;
             }/*FIN CARD RESTO*/
+
+            .card-resto:hover{
+                background-color: #fff;
+                box-shadow: .25rem .25rem 10px rgba(0,0,0,.5);
+            }
 
             .img-resto{
                 border-radius: 1rem 1rem 0 0;
@@ -226,7 +234,7 @@ li::before {
                     font-weight: 700;
                 }
             
-
+/*ANIMATION COEUR NEMESIS*/
                 .emote-card{
                     height: 2rem;
                     width: 2rem;
@@ -323,6 +331,11 @@ li::before {
     align-items: center;
     margin: .5rem 0;
     }
+
+    .li-footer:hover{
+    font-weight: bold;
+cursor: pointer;
+}
 }/*fin footer*/
 
 .logo-footer
@@ -351,4 +364,4 @@ a:link
  color: inherit;
 } 
 
-@import url(_menu-styles.scss);
+@import url(_menu-styles.scss)

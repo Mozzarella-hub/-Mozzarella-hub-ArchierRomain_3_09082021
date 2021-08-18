@@ -225,6 +225,11 @@ body, html {
           justify-content: center;
 }
 
+.section-2 .li-section2:hover {
+  -webkit-box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.679);
+          box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.679);
+}
+
 .section-2 .li-section2 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -237,14 +242,14 @@ body, html {
       -ms-flex-direction: row;
           flex-direction: row;
   margin: 0 0 1rem 0rem;
-  -webkit-box-shadow: 0.25rem 0.25rem 0.5rem;
-          box-shadow: 0.25rem 0.25rem 0.5rem;
   border-radius: 1.25rem;
   background-color: #f6f6f6;
   display: flex;
   position: relative;
   margin-left: 0px;
   padding: 3%;
+  -webkit-box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
+          box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
   /*END txt-li*/
   /*FIN tuto__icon*/
 }
@@ -309,6 +314,12 @@ body, html {
 }
 
 /*FIN CARD RESTO*/
+.card-resto:hover {
+  background-color: #fff;
+  -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+}
+
 .img-resto {
   border-radius: 1rem 1rem 0 0;
   width: 100%;
@@ -363,6 +374,7 @@ body, html {
   font-weight: 700;
 }
 
+/*ANIMATION COEUR NEMESIS*/
 .emote-card {
   height: 2rem;
   width: 2rem;
@@ -484,6 +496,11 @@ body, html {
       -ms-flex-align: center;
           align-items: center;
   margin: .5rem 0;
+}
+
+.footer .li-footer:hover {
+  font-weight: bold;
+  cursor: pointer;
 }
 
 /*fin footer*/
