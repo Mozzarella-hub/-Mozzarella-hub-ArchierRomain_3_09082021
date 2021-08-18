@@ -32,6 +32,9 @@ body, html {
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
     z-index: 1000;
     position: relative;
+    display: flex;
+align-items: center;
+justify-content: space-evenly;
     #logo{
         @include logo;
         @include PositionCenter;
@@ -165,6 +168,7 @@ li::before {
 .section-3{
     background-color: #f0dede7a;
     padding: 2%;
+}
     .contenaire-restaurants{
         @include DirectionColoumn;
         @include PositionCenter;
@@ -208,7 +212,8 @@ li::before {
                 padding: 1rem;
                 position: relative;
                 width: $total;
-                @include PositionCenter
+                @include PositionCenter;
+                color:$black;
                 }/*FIN card-footer*/
 
                 .txt-card{
@@ -220,62 +225,95 @@ li::before {
                     @include font-bold;
                     font-weight: 700;
                 }
+            
 
                 .emote-card{
                     height: 2rem;
                     width: 2rem;
                     background-color: transparent;
-                    border: 0 solid transparent;
+                    border: transparent 0px solid;
                     padding: 0;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
                     cursor: pointer;
                     position: relative;
-                    background-color: #000;
-
-                    ::before{
-                        opacity: 0;
-                        transition: .5s;
-                        content: "";
-                        background: linear-gradient(  0deg  ,#9356dc,#ff79da);
-                    }
-
-                    .menu-like_vide{
-                        transition-duration: .25s;
-                        background-color: #f6f6f6;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        height: 100%;
-                        width: 100%;
-                        display:flex;
-                        align-items:center;
-                        justify-content:center;
-                        mix-blend-mode: lighten;
-                    }
-
-                    .menu-like_plein{
-                        transition-duration: .25s;
-                        background-color: #f6f6f6;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        mix-blend-mode: lighten;
-                    }
+                    background-color: black;
                 }
-}/*FIN SECTION3*/
+
+                .emote-card:hover:before{
+                    opacity: 1;
+                }  
+
+            .emote-card::before{    
+                opacity: 0;
+      transition: 0.5s;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background:linear-gradient(0deg, $color-primary 0%,$color-secondary 100%);
+    }
+
+    .menu-like{
+        transition-duration: .25s;
+    background-color: #f6f6f6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    mix-blend-mode: lighten;
+    }
+
+    
+    .menu__like--noBg:hover{
+        opacity: 0;
+    }
+
+/*
+
+  &__like {
+    transition-duration: .25s;
+    background-color: #f6f6f6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    mix-blend-mode: lighten;
+  }
+
+  &__btn:hover {
+    .menu__like {
+      &--noBg {
+        opacity: 0;
+      }
+    }
+  }
+  */
+
+
+                
+/*FIN SECTION3*/
 
 
 .footer{
-    background-color: rgb(87, 87, 87);
+    background-color: #353535;
     color: $white;
     justify-content: center;
     @include DirectionColoumn;
     padding: 1rem;
 
         .ul-footer{
-            background-color: $black;
             color: $white;
             margin: .5rem 0;
         }
@@ -283,6 +321,7 @@ li::before {
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin: .5rem 0;
     }
 }/*fin footer*/
 
@@ -291,6 +330,11 @@ li::before {
     font-family: "Shrikhand", "cursive";
   font-size: 1.2rem;
   margin: 0 0 1rem;
+}
+
+.footer__icon{
+    width: 1.2rem;
+    margin-right: .5rem;
 }
 
 .li{
@@ -304,5 +348,7 @@ li::before {
 a:link 
 { 
  text-decoration:none; 
- color: $black;
+ color: inherit;
 } 
+
+@import url(_menu-styles.scss);

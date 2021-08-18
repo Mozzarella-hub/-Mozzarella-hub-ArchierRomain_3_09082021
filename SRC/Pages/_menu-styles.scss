@@ -1,0 +1,149 @@
+@import "Variables";
+@import "Mixins";
+
+.header__arrow
+{
+color: black;
+font-size: large;
+}
+
+.dimsension-logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.reglage-header{
+margin-left: -11%;
+}
+
+.card-img
+{
+    height: 12rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.section-menus{
+    background-color: #f6f6f6;
+border-top-left-radius: 2rem;
+border-top-right-radius: 2rem;
+margin-top: -8%;
+position: relative;
+padding: 4%;
+}
+
+.title-menu{
+font-family: "Shrikhand", "cursive";
+font-weight: normal;
+margin-left: 0px;
+}
+
+.dimension-header-section-menus{
+    @include PositionCenter;
+    @include DirectionRow;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+.présentation-menu{
+    font-family: $font-texte;
+}
+
+.plats-menu{
+    @include DirectionRow;
+    display: flex;
+    justify-content: space-between;
+}
+
+.titre-menu
+{
+        text-transform: uppercase;
+        position: relative;
+        padding-bottom: 0.5rem;
+        font-weight: normal;
+}
+    
+        .titre-menu::after {
+          content: "";
+          width: 3rem;
+          height: 0.25rem;
+          background-color:#99E2D0;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+        }
+
+
+
+
+
+.plats-menu{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    margin-bottom: 5%;
+    padding: 1rem;
+    display: flex;
+    border-radius: .75rem;
+    box-shadow: .25rem .25rem 1rem rgba(0,0,0,.1);
+    overflow: hidden;
+    cursor: pointer;
+    animation: itemAppear .6s;
+}
+
+.txt-bold-menu{
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-weight: bold;
+    font-size: large;
+}
+.txt-description-menu{
+    margin-top: 0px;
+margin-bottom: 0px;
+}
+
+
+.price-menu
+{font-weight: 700;
+display: flex;
+justify-content: flex-end;
+align-items: flex-end;
+padding-left: .5rem;
+}
+
+.anim-confirmation-menu{
+    background-color: #99e2d0;
+margin: -1rem -5rem -1rem 1rem;
+width: 4rem;
+display: flex;
+align-items: center;
+justify-content: center;
+transition-duration: .5s;
+}
+
+.animconfirmation-menu:hover{
+    margin-right: -1rem;
+}
+
+
+.menuItem-icon_wrap{
+height: 1.6rem;
+width: 1.6rem;
+background-color: #fff;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 100px;
+transform: rotate(180deg);
+transition-duration: .5s;
+}
+
+.menuItem-icon_wrap:hover {
+    transform: rotate(0);
+  }
+
+.menuItem__icon {
+    color: $color-tertiary;
+  }
