@@ -1,5 +1,5 @@
-@import "Variables";
-@import "Mixins";
+@import url(_Variables.scss);
+@import url(_Mixins.scss);
 
 .header__arrow
 {
@@ -16,10 +16,11 @@ font-size: large;
 margin-left: -11%;
 }
 
+
 .card-img
 {
     height: 12rem;
-    width: 100%;
+    width: $total;
     object-fit: cover;
 }
 

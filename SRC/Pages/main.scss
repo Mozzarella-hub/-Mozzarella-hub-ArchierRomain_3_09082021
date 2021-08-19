@@ -1,5 +1,6 @@
-@import "Mixins";
-@import "Variables";
+@import url(_menu-styles.scss);
+@import url(_Variables.scss);
+@import url(_Mixins.scss);
 
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
@@ -364,4 +365,3 @@ a:link
  color: inherit;
 } 
 
-@import url(_menu-styles.scss)
