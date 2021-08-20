@@ -1,5 +1,6 @@
-@import url(_Variables.scss);
-@import url(_Mixins.scss);
+
+@import url(../Pages/_Mixins.scss);
+@import url(../Pages/_Variables.scss);
 
 .header__arrow
 {
@@ -17,7 +18,7 @@ margin-left: -11%;
 }
 
 
-.card-img
+.img-menu
 {
     height: 12rem;
     width: $total;

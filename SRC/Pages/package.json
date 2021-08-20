@@ -1,0 +1,17 @@
+{
+  "name": "pages",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass-loader": "^12.1.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.51.1"
+  }
+}

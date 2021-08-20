@@ -1,10 +1,7 @@
-@import url(_menu-styles.scss);
-@import url(_Variables.scss);
+@import url(../Pages/_menu-styles.scss);
 /*PLACEMENT*/
 /*FONT-size-style-family-weight*/
 /*CLASS ID IMPORTANT*/
-/*FONT-size-style-family-weight*/
-/*TAILLE*/
 /*FONT-size-style-family-weight*/
 /*TAILLE*/
 body, html {
@@ -254,8 +251,14 @@ body, html {
   /*FIN tuto__icon*/
 }
 
+.section-2 .li-section2 .li-section2:hover {
+  background-color: #fff;
+  -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+}
+
 .section-2 .li-section2 .txt-li {
-  font-weight: "Roboto", "sans-serif";
+  font-weight: bold;
   color: #000000;
   display: -webkit-box;
   display: -ms-flexbox;

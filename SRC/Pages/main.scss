@@ -1,24 +1,6 @@
-@import url(_menu-styles.scss);
-@import url(_Variables.scss);
-@import url(_Mixins.scss);
-
-$color-primary: #9356DC;
-$color-secondary: #FF79DA;
-$color-tertiary: #99E2D0;
-$white: #ffffff;
-$gris:#f5f5f587;
-$black:#000000;
-
-$dark-primary-color: darken(#9356DC, 10%);
-$light-primary-color: lighten(#9356DC, 20%);
-
-/*FONT-size-style-family-weight*/
-$font-texte: 'Roboto', 'sans-serif';
-$font-logo:"Shrikhand", "cursive";
-
-/*TAILLE*/
-$total: 100%;
-$oklm: auto;
+@import url(../Pages/_menu-styles.scss);
+@import url(../Pages/_Mixins.scss);
+@import url(../Pages/_Variables.scss);
 
 body, html {
     margin: 0;
@@ -147,10 +129,15 @@ li::before {
        margin-left: 0px;
        padding: 3%;
        box-shadow: .25rem .25rem .5rem rgba(0,0,0,.125);
+
+       .li-section2:hover{
+        background-color: #fff;
+        box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+       }
         
 
        .txt-li{
-           font-weight: $font-texte;
+           font-weight: bold;
            color: $black;
            @include PositionCenter;
            justify-content: center;
