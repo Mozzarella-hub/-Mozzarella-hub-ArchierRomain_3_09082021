@@ -1,0 +1,35 @@
+.dimsension-logo{
+    @include PositionCenter;
+    justify-content: center;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+    z-index: 1000;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    #logo{
+        @include logo;
+        @include PositionCenter;
+        justify-content: center;
+        font-size: 2em;
+    }
+}/*END dimsension-logo*/
+
+
+
+.dimension-localisation
+{
+    @include DirectionRow;
+    padding: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    justify-content: center;
+    padding: 1.25rem 1rem;
+    background-color: #f3f3f3;
+    width: $oklm;
+    .epingle {
+        width: 2em;
+    }
+    .texte-localisation{
+        font-family: $font-texte;
+    }
+}/*END dimension-localisation*/

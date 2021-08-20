@@ -1,15 +1,318 @@
-@import url(../Pages/_menu-styles.scss);
+@charset "UTF-8";
+/*FONT-size-style-family-weight*/
+/*TAILLE*/
 /*PLACEMENT*/
 /*FONT-size-style-family-weight*/
 /*CLASS ID IMPORTANT*/
 /*FONT-size-style-family-weight*/
 /*TAILLE*/
+/*PLACER LES BOUTON ET LE COEUR*/
+.btn {
+  background-color: #FF79DA;
+  border-radius: 100px;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
+  background-image: linear-gradient(0deg, #9356DC, #FF79DA);
+  background-color: #686868;
+  cursor: pointer;
+  -webkit-transition-duration: .25s;
+          transition-duration: .25s;
+  -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  border-color: transparent;
+  font-family: "Roboto", "sans-serif";
+  width: auto;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+}
+
+/*FIN BTN SECT1*/
+/*ANIMATION COEUR NEMESIS*/
+/*A REFAIRE COURS CSS OPEN*/
+.card-btn {
+  height: 2rem;
+  width: 2rem;
+  background-color: transparent;
+  border: transparent 0px solid;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  position: relative;
+  background-color: black;
+}
+
+.card-btn:hover::before {
+  opacity: 1;
+}
+
+.card-btn::before {
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+}
+
+.card-btn__like {
+  -webkit-transition-duration: .25s;
+          transition-duration: .25s;
+  background-color: #f6f6f6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  mix-blend-mode: lighten;
+}
+
+/*A REFAIRE COURS CSS OPEN*/
+/*FONT-size-style-family-weight*/
+/*TAILLE*/
+/*PLACEMENT*/
+/*FONT-size-style-family-weight*/
+/*CLASS ID IMPORTANT*/
+/*FONT-size-style-family-weight*/
+/*TAILLE*/
+/*PLACER LES BOUTON ET LE COEUR*/
+.btn {
+  background-color: #FF79DA;
+  border-radius: 100px;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
+  background-image: linear-gradient(0deg, #9356DC, #FF79DA);
+  background-color: #686868;
+  cursor: pointer;
+  -webkit-transition-duration: .25s;
+          transition-duration: .25s;
+  -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  border-color: transparent;
+  font-family: "Roboto", "sans-serif";
+  width: auto;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+}
+
+/*FIN BTN SECT1*/
+/*ANIMATION COEUR NEMESIS*/
+/*A REFAIRE COURS CSS OPEN*/
+.card-btn {
+  height: 2rem;
+  width: 2rem;
+  background-color: transparent;
+  border: transparent 0px solid;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  position: relative;
+  background-color: black;
+}
+
+.card-btn:hover::before {
+  opacity: 1;
+}
+
+.card-btn::before {
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+}
+
+.card-btn__like {
+  -webkit-transition-duration: .25s;
+          transition-duration: .25s;
+  background-color: #f6f6f6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  mix-blend-mode: lighten;
+}
+
+/*A REFAIRE COURS CSS OPEN*/
 body, html {
   margin: 0;
   font-family: 'Roboto', sans-serif;
   scroll-behavior: smooth;
 }
 
+.li {
+  display: none;
+}
+
+* {
+  padding: 0;
+}
+
+a:link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.hover {
+  cursor: pointer;
+}
+
+/*FONT-size-style-family-weight*/
+/*TAILLE*/
+/*PLACEMENT*/
+/*FONT-size-style-family-weight*/
+/*CLASS ID IMPORTANT*/
+/*FONT-size-style-family-weight*/
+/*TAILLE*/
+/*PLACER LES BOUTON ET LE COEUR*/
+.btn {
+  background-color: #FF79DA;
+  border-radius: 100px;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
+  background-image: linear-gradient(0deg, #9356DC, #FF79DA);
+  background-color: #686868;
+  cursor: pointer;
+  -webkit-transition-duration: .25s;
+          transition-duration: .25s;
+  -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  border-color: transparent;
+  font-family: "Roboto", "sans-serif";
+  width: auto;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+}
+
+/*FIN BTN SECT1*/
+/*ANIMATION COEUR NEMESIS*/
+/*A REFAIRE COURS CSS OPEN*/
+.card-btn {
+  height: 2rem;
+  width: 2rem;
+  background-color: transparent;
+  border: transparent 0px solid;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  position: relative;
+  background-color: black;
+}
+
+.card-btn:hover::before {
+  opacity: 1;
+}
+
+.card-btn::before {
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+}
+
+.card-btn__like {
+  -webkit-transition-duration: .25s;
+          transition-duration: .25s;
+  background-color: #f6f6f6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  mix-blend-mode: lighten;
+}
+
+/*A REFAIRE COURS CSS OPEN*/
 .dimsension-logo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -25,7 +328,6 @@ body, html {
   z-index: 1000;
   position: relative;
   display: flex;
-  align-items: center;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -80,55 +382,15 @@ body, html {
 }
 
 /*END dimension-localisation*/
-.section-1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #f5f5f587;
-  padding: 2rem;
-  padding-top: inherit;
-  width: auto;
-  text-align: center;
-  /*FIN dimension-txt-section1*/
-  /*FIN BTN SECT1*/
-}
-
-.section-1 .dimension-txt-section1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  /*fin txt-bold-section*/
-  /*fin txt-normal-section1*/
-}
-
-.section-1 .dimension-txt-section1 .txt-bold-section {
-  font-weight: bold;
-  color: #000000;
-}
-
-.section-1 .dimension-txt-section1 .txt-normal-section1 {
-  font-family: "Roboto", "sans-serif";
-  font-size: large;
-  font-weight: 300;
-}
-
-.section-1 .btn {
+/*FONT-size-style-family-weight*/
+/*TAILLE*/
+/*PLACEMENT*/
+/*FONT-size-style-family-weight*/
+/*CLASS ID IMPORTANT*/
+/*FONT-size-style-family-weight*/
+/*TAILLE*/
+/*PLACER LES BOUTON ET LE COEUR*/
+.btn {
   background-color: #FF79DA;
   border-radius: 100px;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
@@ -148,13 +410,635 @@ body, html {
   font-weight: 500;
 }
 
-.section-1 .btn:hover {
+.btn:hover {
   background-color: #ffffff;
   -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
           box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
 }
 
-/*FIN SECTION-1*/
+/*FIN BTN SECT1*/
+/*ANIMATION COEUR NEMESIS*/
+/*A REFAIRE COURS CSS OPEN*/
+.card-btn {
+  height: 2rem;
+  width: 2rem;
+  background-color: transparent;
+  border: transparent 0px solid;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  position: relative;
+  background-color: black;
+}
+
+.card-btn:hover::before {
+  opacity: 1;
+}
+
+.card-btn::before {
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+}
+
+.card-btn__like {
+  -webkit-transition-duration: .25s;
+          transition-duration: .25s;
+  background-color: #f6f6f6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  mix-blend-mode: lighten;
+}
+
+/*A REFAIRE COURS CSS OPEN*/
+.footer {
+  background-color: #353535;
+  color: #ffffff;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem;
+  /*end li-footer*/
+}
+
+.footer .ul-footer {
+  color: #ffffff;
+  margin: .5rem 0;
+}
+
+.footer .li-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  display: flex;
+  align-items: center;
+  margin: .5rem 0;
+}
+
+.footer .li-footer:hover {
+  font-weight: bold;
+}
+
+/*fin footer*/
+.logo-footer {
+  font-family: "Shrikhand", "cursive";
+  font-size: 1.2rem;
+  margin: 0 0 1rem;
+}
+
+.logo-footer footer__icon {
+  width: 1.2rem;
+  margin-right: .5rem;
+}
+
+.header__arrow {
+  color: black;
+  font-size: large;
+}
+
+.dimsension-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.reglage-header {
+  margin-left: -11%;
+}
+
+.img-menu {
+  height: 12rem;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.section-menus {
+  background-color: #f6f6f6;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  margin-top: -8%;
+  position: relative;
+  padding: 4%;
+}
+
+.title-menu {
+  font-family: "Shrikhand", "cursive";
+  font-weight: normal;
+  margin-left: 0px;
+}
+
+.dimension-header-section-menus {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: flex;
+  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: flex;
+}
+
+présentation-menu {
+  font-family: "Roboto", "sans-serif";
+}
+
+présentation-menu plats-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.titre-menu {
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 0.5rem;
+  font-weight: normal;
+}
+
+.titre-menu ::after {
+  content: "";
+  width: 3rem;
+  height: 0.25rem;
+  background-color: #99E2D0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.plats-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: white;
+  margin-bottom: 5%;
+  padding: 1rem;
+  display: flex;
+  border-radius: .75rem;
+  -webkit-box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-animation: itemAppear .6s;
+          animation: itemAppear .6s;
+}
+
+.txt-bold-menu {
+  margin-bottom: 0px;
+  margin-top: 0px;
+  font-weight: bold;
+  font-size: large;
+}
+
+.txt-description-menu {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.price-menu {
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-left: .5rem;
+}
+
+.anim-confirmation-menu {
+  background-color: #99e2d0;
+  margin: -1rem -5rem -1rem 1rem;
+  width: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.animconfirmation-menu:hover {
+  margin-right: -1rem;
+}
+
+.menuItem-icon_wrap {
+  height: 1.6rem;
+  width: 1.6rem;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 100px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.menuItem-icon_wrap:hover {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+
+.menuItem__icon {
+  color: #99E2D0;
+}
+
+.dimsension-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+  position: relative;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.dimsension-logo #logo {
+  font-family: "Shrikhand", "cursive";
+  font-size: 5vh;
+  color: #000000;
+  font-weight: 900;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 2em;
+}
+
+/*END dimsension-logo*/
+.dimension-localisation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1.25rem 1rem;
+  background-color: #f3f3f3;
+  width: auto;
+}
+
+.dimension-localisation .epingle {
+  width: 2em;
+}
+
+.dimension-localisation .texte-localisation {
+  font-family: "Roboto", "sans-serif";
+}
+
+/*END dimension-localisation*/
+/*FONT-size-style-family-weight*/
+/*TAILLE*/
+/*PLACEMENT*/
+/*FONT-size-style-family-weight*/
+/*CLASS ID IMPORTANT*/
+/*FONT-size-style-family-weight*/
+/*TAILLE*/
+/*PLACER LES BOUTON ET LE COEUR*/
+.btn {
+  background-color: #FF79DA;
+  border-radius: 100px;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
+  background-image: linear-gradient(0deg, #9356DC, #FF79DA);
+  background-color: #686868;
+  cursor: pointer;
+  -webkit-transition-duration: .25s;
+          transition-duration: .25s;
+  -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  border-color: transparent;
+  font-family: "Roboto", "sans-serif";
+  width: auto;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+}
+
+/*FIN BTN SECT1*/
+/*ANIMATION COEUR NEMESIS*/
+/*A REFAIRE COURS CSS OPEN*/
+.card-btn {
+  height: 2rem;
+  width: 2rem;
+  background-color: transparent;
+  border: transparent 0px solid;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  position: relative;
+  background-color: black;
+}
+
+.card-btn:hover::before {
+  opacity: 1;
+}
+
+.card-btn::before {
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+}
+
+.card-btn__like {
+  -webkit-transition-duration: .25s;
+          transition-duration: .25s;
+  background-color: #f6f6f6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  mix-blend-mode: lighten;
+}
+
+/*A REFAIRE COURS CSS OPEN*/
+.section-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f5f5f587;
+  padding: 2rem;
+  padding-top: inherit;
+  width: auto;
+  text-align: center;
+}
+
+.dimension-txt-section1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.txt-bold-section {
+  font-weight: bold;
+  color: #000000;
+}
+
+/*fin txt-bold-section*/
+.txt-normal-section1 {
+  font-family: "Roboto", "sans-serif";
+  font-size: large;
+  font-weight: 300;
+}
+
+/*fin txt-normal-section1*/
+/*FONT-size-style-family-weight*/
+/*TAILLE*/
+/*PLACEMENT*/
+/*FONT-size-style-family-weight*/
+/*CLASS ID IMPORTANT*/
+/*FONT-size-style-family-weight*/
+/*TAILLE*/
+/*PLACER LES BOUTON ET LE COEUR*/
+.btn {
+  background-color: #FF79DA;
+  border-radius: 100px;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
+  background-image: linear-gradient(0deg, #9356DC, #FF79DA);
+  background-color: #686868;
+  cursor: pointer;
+  -webkit-transition-duration: .25s;
+          transition-duration: .25s;
+  -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  border-color: transparent;
+  font-family: "Roboto", "sans-serif";
+  width: auto;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+}
+
+/*FIN BTN SECT1*/
+/*ANIMATION COEUR NEMESIS*/
+/*A REFAIRE COURS CSS OPEN*/
+.card-btn {
+  height: 2rem;
+  width: 2rem;
+  background-color: transparent;
+  border: transparent 0px solid;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  position: relative;
+  background-color: black;
+}
+
+.card-btn:hover::before {
+  opacity: 1;
+}
+
+.card-btn::before {
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+}
+
+.card-btn__like {
+  -webkit-transition-duration: .25s;
+          transition-duration: .25s;
+  background-color: #f6f6f6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  mix-blend-mode: lighten;
+}
+
+/*A REFAIRE COURS CSS OPEN*/
 .section-2 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -277,6 +1161,103 @@ body, html {
 }
 
 /*FIN SECTION 2*/
+/*FONT-size-style-family-weight*/
+/*TAILLE*/
+/*PLACEMENT*/
+/*FONT-size-style-family-weight*/
+/*CLASS ID IMPORTANT*/
+/*FONT-size-style-family-weight*/
+/*TAILLE*/
+/*PLACER LES BOUTON ET LE COEUR*/
+.btn {
+  background-color: #FF79DA;
+  border-radius: 100px;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
+  background-image: linear-gradient(0deg, #9356DC, #FF79DA);
+  background-color: #686868;
+  cursor: pointer;
+  -webkit-transition-duration: .25s;
+          transition-duration: .25s;
+  -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  border-color: transparent;
+  font-family: "Roboto", "sans-serif";
+  width: auto;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+}
+
+/*FIN BTN SECT1*/
+/*ANIMATION COEUR NEMESIS*/
+/*A REFAIRE COURS CSS OPEN*/
+.card-btn {
+  height: 2rem;
+  width: 2rem;
+  background-color: transparent;
+  border: transparent 0px solid;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  position: relative;
+  background-color: black;
+}
+
+.card-btn:hover::before {
+  opacity: 1;
+}
+
+.card-btn::before {
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+}
+
+.card-btn__like {
+  -webkit-transition-duration: .25s;
+          transition-duration: .25s;
+  background-color: #f6f6f6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  mix-blend-mode: lighten;
+}
+
+/*A REFAIRE COURS CSS OPEN*/
 .section-3 {
   background-color: #f0dede7a;
   padding: 2%;
@@ -377,8 +1358,45 @@ body, html {
   font-weight: 700;
 }
 
+/*FIN SECTION3*/
+/*FONT-size-style-family-weight*/
+/*TAILLE*/
+/*PLACEMENT*/
+/*FONT-size-style-family-weight*/
+/*CLASS ID IMPORTANT*/
+/*FONT-size-style-family-weight*/
+/*TAILLE*/
+/*PLACER LES BOUTON ET LE COEUR*/
+.btn {
+  background-color: #FF79DA;
+  border-radius: 100px;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
+  background-image: linear-gradient(0deg, #9356DC, #FF79DA);
+  background-color: #686868;
+  cursor: pointer;
+  -webkit-transition-duration: .25s;
+          transition-duration: .25s;
+  -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  border-color: transparent;
+  font-family: "Roboto", "sans-serif";
+  width: auto;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+}
+
+/*FIN BTN SECT1*/
 /*ANIMATION COEUR NEMESIS*/
-.emote-card {
+/*A REFAIRE COURS CSS OPEN*/
+.card-btn {
   height: 2rem;
   width: 2rem;
   background-color: transparent;
@@ -398,11 +1416,11 @@ body, html {
   background-color: black;
 }
 
-.emote-card:hover:before {
+.card-btn:hover::before {
   opacity: 1;
 }
 
-.emote-card::before {
+.card-btn::before {
   opacity: 0;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -416,7 +1434,7 @@ body, html {
   background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
 }
 
-.menu-like {
+.card-btn__like {
   -webkit-transition-duration: .25s;
           transition-duration: .25s;
   background-color: #f6f6f6;
@@ -437,35 +1455,7 @@ body, html {
   mix-blend-mode: lighten;
 }
 
-.menu__like--noBg:hover {
-  opacity: 0;
-}
-
-/*
-
-  &__like {
-    transition-duration: .25s;
-    background-color: #f6f6f6;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    mix-blend-mode: lighten;
-  }
-
-  &__btn:hover {
-    .menu__like {
-      &--noBg {
-        opacity: 0;
-      }
-    }
-  }
-  */
-/*FIN SECTION3*/
+/*A REFAIRE COURS CSS OPEN*/
 .footer {
   background-color: #353535;
   color: #ffffff;
@@ -480,6 +1470,7 @@ body, html {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 1rem;
+  /*end li-footer*/
 }
 
 .footer .ul-footer {
@@ -491,19 +1482,21 @@ body, html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: flex;
+  align-items: center;
   margin: .5rem 0;
 }
 
 .footer .li-footer:hover {
   font-weight: bold;
-  cursor: pointer;
 }
 
 /*fin footer*/
@@ -513,21 +1506,8 @@ body, html {
   margin: 0 0 1rem;
 }
 
-.footer__icon {
+.logo-footer footer__icon {
   width: 1.2rem;
   margin-right: .5rem;
-}
-
-.li {
-  display: none;
-}
-
-* {
-  padding: 0;
-}
-
-a:link {
-  text-decoration: none;
-  color: inherit;
 }
 /*# sourceMappingURL=main.css.map */

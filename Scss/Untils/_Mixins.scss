@@ -1,0 +1,84 @@
+@import '../Untils/Variables';
+
+/*PLACEMENT*/
+@mixin PositionCenter {
+    display: flex;
+    align-items: center;   
+}
+
+@mixin DirectionColoumn {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin DirectionRow {
+    @include PositionCenter;
+    flex-direction: row;
+}
+
+
+/*FONT-size-style-family-weight*/
+
+@mixin font-bold {
+   font-weight: bold;
+   color: $black;
+}
+
+/*CLASS ID IMPORTANT*/
+@mixin logo{
+    font-family: "Shrikhand", "cursive";
+    font-size: 5vh;
+    color: $black;
+    font-weight: 900;
+    }
+
+
+
+@mixin btn {
+    background-color: $color-secondary;
+    border-radius: 100px;
+    background-image: linear-gradient(0deg,$color-primary,$color-secondary);
+    background-color: rgb(104, 104, 104);
+    cursor: pointer;
+    transition-duration: .25s;
+    box-shadow: .25rem .25rem 10px rgba(0,0,0,.25);
+    text-align: center;
+    border-color: transparent;
+    &:hover{
+        background-color: $white;
+    box-shadow: .25rem .25rem 10px rgba(0,0,0,.5);
+    }   
+}
+
+@mixin emot-marker {
+    counter-increment: compteListe 1;
+    content: counter(compteListe) " ";
+    background:$color-secondary;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 100px;
+    @include PositionCenter();
+    justify-content: center;
+    color: $white;
+    position: absolute;
+    left: -.75rem;
+}
+
+
+@mixin DirectionLeft {
+    @include PositionCenter();
+    justify-content: left;
+}
+
+@mixin counter{
+      height: 1.5rem;
+      width: 1.5rem;
+      border-radius: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $white;
+      background: $color-primary;
+      margin-left: -10%;
+    margin-right: 5%;
+}

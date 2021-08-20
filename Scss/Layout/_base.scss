@@ -1,0 +1,29 @@
+@import '../../Scss/Untils/Mixins';
+@import '../../Scss/Untils/Variables';
+@import '../../Scss/components/animations';
+@import '../../Scss/components/fonctions';
+
+
+body, html {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+    
+  }
+.li{
+    display: none;
+}
+
+*{
+    padding:0;
+}
+
+a:link 
+{ 
+ text-decoration:none; 
+ color: inherit;
+} 
+
+.hover{
+    cursor: pointer;
+}

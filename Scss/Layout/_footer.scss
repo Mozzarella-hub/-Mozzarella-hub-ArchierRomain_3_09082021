@@ -1,0 +1,40 @@
+@import '../../Scss/Untils/Mixins';
+@import '../../Scss/Untils/Variables';
+@import '../../Scss/components/animations';
+@import '../../Scss/components/fonctions';
+
+
+.footer{
+    background-color: #353535;
+    color: $white;
+    justify-content: center;
+    @include DirectionColoumn;
+    padding: 1rem;
+
+        .ul-footer{
+            color: $white;
+            margin: .5rem 0;
+        }
+    .li-footer{
+    display: flex;
+    @include DirectionRow;
+    @include PositionCenter;
+    margin: .5rem 0;
+        &:hover{
+        font-weight: bold;
+        }
+    }/*end li-footer*/
+}/*fin footer*/
+
+.logo-footer
+{
+    font-family: $font-logo;
+    font-size: 1.2rem;
+    margin: 0 0 1rem;
+
+
+        footer__icon{
+    width: 1.2rem;
+    margin-right: .5rem;
+    }
+}

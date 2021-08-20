@@ -1,0 +1,73 @@
+@import '../../Scss/Untils/Mixins';
+@import '../../Scss/Untils/Variables';
+@import '../../Scss/components/animations';
+@import '../../Scss/components/fonctions';
+
+.section-2
+{
+    @include DirectionColoumn;
+    background-color: $white;
+    padding: 8%;
+
+    .h2-left_mixin{
+        @include DirectionLeft
+    }
+    
+    .ol{
+        counter-reset: Choix;                /* Creates a new instance of the
+                                            section counter with each ol
+                                            element */
+  list-style-type: none;
+}
+
+li::before {
+  counter-increment: Choix 1;            /* Increments only this instance
+                                            of the section counter */
+  content: counters(Choix, "");   /* Combines the values of all instances
+                                            of the section counter, separated
+                                            by a period */
+    @include counter;
+    }/*FIN OL*/
+
+    .parent-ol{
+        justify-content: center;
+        
+    }/*fin parent-ol*/
+
+    .li-section2:hover{
+        box-shadow: .25rem .25rem .5rem rgba(0, 0, 0, 0.679);
+    }
+   .li-section2 {
+       @include DirectionRow;
+       margin: 0 0 1rem 0rem;
+       border-radius: 1.25rem;
+       background-color: #f6f6f6;
+       display: flex;
+       position: relative;
+       margin-left: 0px;
+       padding: 3%;
+       box-shadow: .25rem .25rem .5rem rgba(0,0,0,.125);
+
+       .li-section2:hover{
+        background-color: #fff;
+        box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+       }
+        
+
+       .txt-li{
+           font-weight: bold;
+           color: $black;
+           @include PositionCenter;
+           justify-content: center;
+        }/*END txt-li*/
+
+        .tuto__icon {
+            margin-right: 2rem;
+            color: #7e7e7e;
+            }/*FIN tuto__icon*/
+
+        }/*li-section2*/
+        
+    
+    
+}/*FIN SECTION 2*/

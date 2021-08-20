@@ -1,0 +1,29 @@
+@import '../../Scss/Untils/Mixins';
+@import '../../Scss/Untils/Variables';
+@import '../../Scss/components/animations';
+@import '../../Scss/components/fonctions';
+
+.section-1
+{
+    @include DirectionColoumn;
+    @include PositionCenter;
+    background-color: $gris;
+    padding: 2rem;
+    padding-top: inherit;
+    width: $oklm;
+    text-align: center;
+}
+
+    .dimension-txt-section1{
+       @include DirectionColoumn;
+       @include PositionCenter;
+    }
+        .txt-bold-section{
+            @include font-bold;
+            }/*fin txt-bold-section*/
+        
+        .txt-normal-section1{
+            font-family: $font-texte;
+            font-size: large;
+            font-weight: 300;
+            }/*fin txt-normal-section1*/
