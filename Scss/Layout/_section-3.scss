@@ -21,12 +21,11 @@
             margin: 1rem;
             @include DirectionColoumn;
             width: 97%;
-            }/*FIN CARD RESTO*/
-
-            .card-resto:hover{
+                &:hover{
                 background-color: #fff;
                 box-shadow: .25rem .25rem 10px rgba(0,0,0,.5);
             }
+        }/*FIN CARD RESTO*/
 
             .img-resto{
                 border-radius: 1rem 1rem 0 0;
@@ -57,18 +56,18 @@
                 width: $total;
                 @include PositionCenter;
                 color:$black;
-                }/*FIN card-footer*/
+                
 
-                .txt-card{
+                &__txt{
                     flex: 1;
                     padding: 1em
                 }/*txt-card*/
-
-                .card-title{
+            
+                &__title{
                     @include font-bold;
                     font-weight: 700;
                 }
-
+            }/*FIN card-footer*/
 
                 
 /*FIN SECTION3*/

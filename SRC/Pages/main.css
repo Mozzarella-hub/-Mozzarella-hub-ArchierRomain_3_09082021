@@ -313,7 +313,7 @@ a:link {
 }
 
 /*A REFAIRE COURS CSS OPEN*/
-.dimsension-logo {
+.logo-dimsension {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -333,7 +333,7 @@ a:link {
           justify-content: space-evenly;
 }
 
-.dimsension-logo #logo {
+.logo-dimsension #logo {
   font-family: "Shrikhand", "cursive";
   font-size: 5vh;
   color: #000000;
@@ -351,7 +351,7 @@ a:link {
 }
 
 /*END dimsension-logo*/
-.dimension-localisation {
+.localisation-dimension {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -373,11 +373,11 @@ a:link {
   width: auto;
 }
 
-.dimension-localisation .epingle {
+.localisation-dimension .epingle {
   width: 2em;
 }
 
-.dimension-localisation .texte-localisation {
+.localisation-dimension .localisation-texte {
   font-family: "Roboto", "sans-serif";
 }
 
@@ -493,15 +493,16 @@ a:link {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 1rem;
+  /*footer-ul*/
+}
+
+.footer .footer-ul {
+  color: #ffffff;
+  margin: .5rem 0;
   /*end li-footer*/
 }
 
-.footer .ul-footer {
-  color: #ffffff;
-  margin: .5rem 0;
-}
-
-.footer .li-footer {
+.footer .footer-ul .footer-ul__li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -518,18 +519,18 @@ a:link {
   margin: .5rem 0;
 }
 
-.footer .li-footer:hover {
+.footer .footer-ul .footer-ul__li:hover {
   font-weight: bold;
 }
 
 /*fin footer*/
-.logo-footer {
+.footer-logo {
   font-family: "Shrikhand", "cursive";
   font-size: 1.2rem;
   margin: 0 0 1rem;
 }
 
-.logo-footer footer__icon {
+.footer-logo footer__icon {
   width: 1.2rem;
   margin-right: .5rem;
 }
@@ -539,7 +540,7 @@ a:link {
   font-size: large;
 }
 
-.dimsension-logo {
+.logo-dimsension {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -551,7 +552,7 @@ a:link {
           justify-content: space-evenly;
 }
 
-.reglage-header {
+.header-reglage {
   margin-left: -11%;
 }
 
@@ -596,11 +597,11 @@ a:link {
   display: flex;
 }
 
-présentation-menu {
+.présentation-menu {
   font-family: "Roboto", "sans-serif";
 }
 
-présentation-menu plats-menu {
+.présentation-menu .plats-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -615,6 +616,12 @@ présentation-menu plats-menu {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.présentation-menu .plats-menu:hover {
+  background-color: #fff;
+  -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
 }
 
 .titre-menu {
@@ -730,7 +737,7 @@ présentation-menu plats-menu {
   color: #99E2D0;
 }
 
-.dimsension-logo {
+.logo-dimsension {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -750,7 +757,7 @@ présentation-menu plats-menu {
           justify-content: space-evenly;
 }
 
-.dimsension-logo #logo {
+.logo-dimsension #logo {
   font-family: "Shrikhand", "cursive";
   font-size: 5vh;
   color: #000000;
@@ -768,7 +775,7 @@ présentation-menu plats-menu {
 }
 
 /*END dimsension-logo*/
-.dimension-localisation {
+.localisation-dimension {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -790,11 +797,11 @@ présentation-menu plats-menu {
   width: auto;
 }
 
-.dimension-localisation .epingle {
+.localisation-dimension .epingle {
   width: 2em;
 }
 
-.dimension-localisation .texte-localisation {
+.localisation-dimension .localisation-texte {
   font-family: "Roboto", "sans-serif";
 }
 
@@ -915,7 +922,7 @@ présentation-menu plats-menu {
   text-align: center;
 }
 
-.dimension-txt-section1 {
+.section1-dimension-txt {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -927,21 +934,21 @@ présentation-menu plats-menu {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  /*fin txt-bold-section*/
+  /*fin txt-normal-section1*/
 }
 
-.txt-bold-section {
-  font-weight: bold;
+.section1-dimension-txttxt__bold {
+  font-weight: 700;
   color: #000000;
 }
 
-/*fin txt-bold-section*/
-.txt-normal-section1 {
+.section1-dimension-txttxt__normal {
   font-family: "Roboto", "sans-serif";
   font-size: large;
   font-weight: 300;
 }
 
-/*fin txt-normal-section1*/
 /*FONT-size-style-family-weight*/
 /*TAILLE*/
 /*PLACEMENT*/
@@ -1051,7 +1058,7 @@ présentation-menu plats-menu {
   padding: 8%;
   /*FIN OL*/
   /*fin parent-ol*/
-  /*li-section2*/
+  /*section2-li*/
 }
 
 .section-2 .h2-left_mixin {
@@ -1111,7 +1118,7 @@ présentation-menu plats-menu {
           box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.679);
 }
 
-.section-2 .li-section2 {
+.section-2 .section2-li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1131,17 +1138,17 @@ présentation-menu plats-menu {
   padding: 3%;
   -webkit-box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
           box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
-  /*END txt-li*/
+  /*END li-txt*/
   /*FIN tuto__icon*/
 }
 
-.section-2 .li-section2 .li-section2:hover {
+.section-2 .section2-li:hover {
   background-color: #fff;
   -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
           box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
 }
 
-.section-2 .li-section2 .txt-li {
+.section-2 .section2-li__txt {
   font-weight: bold;
   color: #000000;
   display: -webkit-box;
@@ -1155,7 +1162,7 @@ présentation-menu plats-menu {
           justify-content: center;
 }
 
-.section-2 .li-section2 .tuto__icon {
+.section-2 .section2-li .tuto__icon {
   margin-right: 2rem;
   color: #7e7e7e;
 }
@@ -1297,13 +1304,13 @@ présentation-menu plats-menu {
   width: 97%;
 }
 
-/*FIN CARD RESTO*/
 .card-resto:hover {
   background-color: #fff;
   -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
           box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
 }
 
+/*FIN CARD RESTO*/
 .img-resto {
   border-radius: 1rem 1rem 0 0;
   width: 100%;
@@ -1341,23 +1348,23 @@ présentation-menu plats-menu {
       -ms-flex-align: center;
           align-items: center;
   color: #000000;
+  /*txt-card*/
 }
 
-/*FIN card-footer*/
-.txt-card {
+.card-footer__txt {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   padding: 1em;
 }
 
-/*txt-card*/
-.card-title {
-  font-weight: bold;
+.card-footer__title {
+  font-weight: 700;
   color: #000000;
   font-weight: 700;
 }
 
+/*FIN card-footer*/
 /*FIN SECTION3*/
 /*FONT-size-style-family-weight*/
 /*TAILLE*/
@@ -1470,15 +1477,16 @@ présentation-menu plats-menu {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 1rem;
+  /*footer-ul*/
+}
+
+.footer .footer-ul {
+  color: #ffffff;
+  margin: .5rem 0;
   /*end li-footer*/
 }
 
-.footer .ul-footer {
-  color: #ffffff;
-  margin: .5rem 0;
-}
-
-.footer .li-footer {
+.footer .footer-ul .footer-ul__li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1495,18 +1503,18 @@ présentation-menu plats-menu {
   margin: .5rem 0;
 }
 
-.footer .li-footer:hover {
+.footer .footer-ul .footer-ul__li:hover {
   font-weight: bold;
 }
 
 /*fin footer*/
-.logo-footer {
+.footer-logo {
   font-family: "Shrikhand", "cursive";
   font-size: 1.2rem;
   margin: 0 0 1rem;
 }
 
-.logo-footer footer__icon {
+.footer-logo footer__icon {
   width: 1.2rem;
   margin-right: .5rem;
 }

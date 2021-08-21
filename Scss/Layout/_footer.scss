@@ -11,22 +11,24 @@
     @include DirectionColoumn;
     padding: 1rem;
 
-        .ul-footer{
-            color: $white;
+    .footer-ul{
+        color: $white;
+        margin: .5rem 0;
+    
+        .footer-ul__li{
+            display: flex;
+            @include DirectionRow;
+            @include PositionCenter;
             margin: .5rem 0;
-        }
-    .li-footer{
-    display: flex;
-    @include DirectionRow;
-    @include PositionCenter;
-    margin: .5rem 0;
-        &:hover{
-        font-weight: bold;
-        }
-    }/*end li-footer*/
+            &:hover{
+                font-weight: bold;
+                }
+        }/*end li-footer*/
+        
+    }/*footer-ul*/
 }/*fin footer*/
 
-.logo-footer
+.footer-logo
 {
     font-family: $font-logo;
     font-size: 1.2rem;

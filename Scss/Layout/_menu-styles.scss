@@ -15,12 +15,12 @@ color: black;
 font-size: large;
 }
 
-.dimsension-logo{
+.logo-dimsension{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
-.reglage-header{
+.header-reglage{
 margin-left: -11%;
 }
 
@@ -55,15 +55,19 @@ margin-left: 0px;
     display: flex;
 }
 
-    présentation-menu{
+    .présentation-menu{ 
         font-family: $font-texte;
 
-        plats-menu{
+        .plats-menu{
         @include DirectionRow;
         display: flex;
         justify-content: space-between;
+        &:hover{
+            background-color: #fff;
+            box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+           }
+        }
     }
-}
 
 .titre-menu
 {

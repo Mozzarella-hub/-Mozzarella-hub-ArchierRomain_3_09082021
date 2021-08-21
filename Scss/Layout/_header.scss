@@ -1,4 +1,4 @@
-.dimsension-logo{
+.logo-dimsension{
     @include PositionCenter;
     justify-content: center;
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
@@ -16,7 +16,7 @@
 
 
 
-.dimension-localisation
+.localisation-dimension
 {
     @include DirectionRow;
     padding: 1.5rem;
@@ -29,7 +29,7 @@
     .epingle {
         width: 2em;
     }
-    .texte-localisation{
+    .localisation-texte{
         font-family: $font-texte;
     }
 }/*END dimension-localisation*/

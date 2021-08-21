@@ -14,16 +14,17 @@
     text-align: center;
 }
 
-    .dimension-txt-section1{
+    .section1-dimension-txt{
        @include DirectionColoumn;
        @include PositionCenter;
-    }
-        .txt-bold-section{
+    
+        &txt__bold{
             @include font-bold;
             }/*fin txt-bold-section*/
         
-        .txt-normal-section1{
+        &txt__normal{
             font-family: $font-texte;
             font-size: large;
             font-weight: 300;
             }/*fin txt-normal-section1*/
+        }
