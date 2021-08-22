@@ -1,38 +1,3 @@
-
-@import '../../Scss/Untils/Mixins';
-@import '../../Scss/Untils/Variables';
-@import '../../Scss/components/animations';
-@import '../../Scss/components/fonctions';
-
-
-@import '../../Scss/Layout/header';
-@import '../../Scss/Layout/footer';
-
-
-.header__arrow
-{
-color: black;
-font-size: large;
-}
-
-.logo-dimsension{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}
-.header-reglage{
-margin-left: -11%;
-}
-
-
-.img-menu
-{
-    height: 12rem;
-    width: $total;
-    object-fit: cover;
-}
-
-
 .section-menus{
     background-color: #f6f6f6;
 border-top-left-radius: 2rem;
@@ -42,12 +7,6 @@ position: relative;
 padding: 4%;
 }
 
-.title-menu{
-font-family: $font-logo;
-font-weight: normal;
-margin-left: 0px;
-}
-
 .dimension-header-section-menus{
     @include PositionCenter;
     @include DirectionRow;
@@ -55,7 +14,22 @@ margin-left: 0px;
     display: flex;
 }
 
-    .présentation-menu{ 
+.title-menu{
+    font-family: $font-logo;
+    font-weight: normal;
+    margin-left: 0px;
+    }
+
+.menu-queries_grid{
+    @media only screen and (min-width: 1023px) {
+        grid-template-columns: repeat(3,1fr);
+        column-gap: 1rem;
+        display: grid;
+        }
+}
+
+
+    .menu-présentation{ 
         font-family: $font-texte;
 
         .plats-menu{
@@ -69,7 +43,7 @@ margin-left: 0px;
         }
     }
 
-.titre-menu
+.menu-titre
 {
         text-transform: uppercase;
         position: relative;
@@ -77,7 +51,7 @@ margin-left: 0px;
         font-weight: normal;
 
     
-            ::after {
+            &::after {
             content: "";
              width: 3rem;
             height: 0.25rem;
@@ -90,7 +64,7 @@ margin-left: 0px;
 
 
 
-.plats-menu{
+.menu-plats{
     display: flex;
     justify-content: space-between;
     background-color: white;
@@ -102,29 +76,33 @@ margin-left: 0px;
     overflow: hidden;
     cursor: pointer;
     animation: itemAppear .6s;
+    &:hover{
+        background-color: #fff;
+        box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+       }
 }
 
-.txt-bold-menu{
+.menu-txt__bold{
     margin-bottom: 0px;
     margin-top: 0px;
     font-weight: bold;
     font-size: large;
 }
-.txt-description-menu{
+.menu-txt__description{
     margin-top: 0px;
 margin-bottom: 0px;
 }
 
 
-.price-menu
-{font-weight: 700;
+.menu-price{
+font-weight: 700;
 display: flex;
 justify-content: flex-end;
 align-items: flex-end;
 padding-left: .5rem;
 }
 
-.anim-confirmation-menu{
+.menu-confirmation__anim{
     background-color: #99e2d0;
 margin: -1rem -5rem -1rem 1rem;
 width: 4rem;
@@ -132,10 +110,9 @@ display: flex;
 align-items: center;
 justify-content: center;
 transition-duration: .5s;
-}
-
-.animconfirmation-menu:hover{
+    &:hover{
     margin-right: -1rem;
+}
 }
 
 
@@ -149,12 +126,12 @@ justify-content: center;
 border-radius: 100px;
 transform: rotate(180deg);
 transition-duration: .5s;
-}
 
-.menuItem-icon_wrap:hover {
+
+        &:hover {
     transform: rotate(0);
   }
-
+}
 .menuItem__icon {
     color: $color-tertiary;
   }

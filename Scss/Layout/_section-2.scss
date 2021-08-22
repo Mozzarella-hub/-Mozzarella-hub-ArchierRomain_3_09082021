@@ -9,21 +9,23 @@
     background-color: $white;
     padding: 8%;
 
+    @media (min-width:64rem) {padding: 3%};
+
     .h2-left_mixin{
         @include DirectionLeft
     }
     
-    .ol{
+    .ol{    
         counter-reset: Choix;                /* Creates a new instance of the
                                             section counter with each ol
                                             element */
   list-style-type: none;
-}
+    }
 
-li::before {
+    li::before {
   counter-increment: Choix 1;            /* Increments only this instance
                                             of the section counter */
-  content: counters(Choix, "");   /* Combines the values of all instances
+  content: counters(Choix, "1");   /* Combines the values of all instances
                                             of the section counter, separated
                                             by a period */
     @include counter;
@@ -31,6 +33,15 @@ li::before {
 
     .parent-ol{
         justify-content: center;
+
+
+        .ol-fonction{
+        @media (min-width:64rem) {
+            @include DirectionRow;
+            height: 4rem;
+            justify-content: space-between;
+            }
+        }
         
     }/*fin parent-ol*/
 
@@ -52,10 +63,20 @@ li::before {
         background-color: #fff;
         box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
        }
+
+       @media (min-width:64rem) {
+        flex: 1;
+        margin: 0;
+        margin-left: 2rem;
+        padding: .5em;
+  
+        &:first-child {
+          margin-left: 0.75rem;
+        }
+      }
         
 
         &__txt{
-           font-weight: bold;
            color: $black;
            @include PositionCenter;
            justify-content: center;

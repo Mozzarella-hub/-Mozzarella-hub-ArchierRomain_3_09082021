@@ -10,6 +10,14 @@
     .contenaire-restaurants{
         @include DirectionColoumn;
         @include PositionCenter;
+
+        @media (min-width:64rem) {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+
         }/*FIN contenaire-restaurants*/
 
         .card-resto{
