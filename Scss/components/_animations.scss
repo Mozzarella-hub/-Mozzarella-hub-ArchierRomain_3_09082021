@@ -15,49 +15,128 @@
 
 
 /*ANIMATION COEUR NEMESIS*/
-
-/*A REFAIRE COURS CSS OPEN*/
-.card-btn{
-    height: 2rem;
-    width: 2rem;
-    background-color: transparent;
-    border: transparent 0px solid;
-    padding: 0;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    cursor: pointer;
-    position: relative;
-    background-color: black;
-    
-    &:hover::before {
-      opacity: 1;
-    }
-    
-    &::before {
+.hearth {
+  @include PositionCenter;
+  margin-right: 20px;
+  width: 30px;
+  stroke-width: 30;
+  cursor: pointer;
+  fill: $white;
+  stroke: $black;
+}
+.heart-full {
+  position: absolute;
+  fill: url(#text-fill);
+  stroke: none;
+  width: 50px;
+}
+.heart-vide {
+  width: 50px;
+  position: relative; 
+  fill: $white;
+    &:hover {
       opacity: 0;
       transition: 0.5s;
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background:linear-gradient(0deg, $color-primary 0%,$color-secondary 100%);
+  }
+}
+/*A REFAIRE COURS CSS OPEN*/
+.emote-cards {
+    background: $white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    border-radius: 0 0 20px 20px;
+    background-color: transparent;
+    width: 20%;
+    
+    &-hearth {
+      justify-content: center;
+    @include PositionCenter;
+    margin-right: 20px;
+    width: 30px;
     }
 
+        &::before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          opacity: 0;
+          transition: .5s;
+          content: "";
+          background: linear-gradient(0deg,#9356dc,#ff79da);
+        }
+    }
 
-  &__like {
-    transition-duration: .25s;
-    background-color: #f6f6f6;
+  /*
+  height: 2rem;
+  width: 2rem;
+  background-color: transparent;
+  border: 0 solid transparent;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+   
+  &::before {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    mix-blend-mode: lighten;
+    opacity: 0;
+    transition: .5s;
+    content: "";
+    background: linear-gradient(0deg,#9356dc,#ff79da);
+  }
+
+  &__like {
+    transition-duration: .25s;
+background-color: #f6f6f6;
+display: flex;
+align-items: center;
+justify-content: center;
+mix-blend-mode: lighten;
+  }
+
+
+  &:hover {
+    .menu__like {
+      &--noBg {
+        opacity: 0;
+      }
+    }
   }
 }/*A REFAIRE COURS CSS OPEN*/
+
+
+
+
+
+@keyframes itemAppear {
+  0% {
+    transform: scale(0)
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(0.5rem);
+  }
+  75% {
+    transform: translateY(-0.5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

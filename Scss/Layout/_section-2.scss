@@ -8,28 +8,22 @@
     @include DirectionColoumn;
     background-color: $white;
     padding: 8%;
-
     @media (min-width:64rem) {padding: 3%};
 
     .h2-left_mixin{
         @include DirectionLeft
     }
-    
-    .ol{    
-        counter-reset: Choix;                /* Creates a new instance of the
-                                            section counter with each ol
-                                            element */
-  list-style-type: none;
-    }
 
     li::before {
-  counter-increment: Choix 1;            /* Increments only this instance
-                                            of the section counter */
-  content: counters(Choix, "1");   /* Combines the values of all instances
-                                            of the section counter, separated
-                                            by a period */
+    counter-increment: Choix 1;                          
+    content: counters(Choix, "1");   
     @include counter;
     }/*FIN OL*/
+
+    .ol-fonction{    
+        counter-reset: Choix;                
+        list-style-type: "";
+    }
 
     .parent-ol{
         justify-content: center;
@@ -40,9 +34,10 @@
             @include DirectionRow;
             height: 4rem;
             justify-content: space-between;
+            counter-reset: Choix;                
+            list-style-type: "";
             }
         }
-        
     }/*fin parent-ol*/
 
     .li-section2:hover{
@@ -73,7 +68,7 @@
         &:first-child {
           margin-left: 0.75rem;
         }
-      }
+      }/*fin media*/
         
 
         &__txt{

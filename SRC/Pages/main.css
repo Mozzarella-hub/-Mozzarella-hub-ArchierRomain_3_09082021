@@ -35,56 +35,206 @@
 
 /*FIN BTN SECT1*/
 /*ANIMATION COEUR NEMESIS*/
-/*A REFAIRE COURS CSS OPEN*/
-.card-btn {
-  height: 2rem;
-  width: 2rem;
-  background-color: transparent;
-  border: transparent 0px solid;
-  padding: 0;
+.hearth {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  margin-right: 20px;
+  width: 30px;
+  stroke-width: 30;
   cursor: pointer;
+  fill: #ffffff;
+  stroke: #000000;
+}
+
+.heart-full {
+  position: absolute;
+  fill: url(#text-fill);
+  stroke: none;
+  width: 50px;
+}
+
+.heart-vide {
+  width: 50px;
   position: relative;
-  background-color: black;
+  fill: #ffffff;
 }
 
-.card-btn:hover::before {
-  opacity: 1;
-}
-
-.card-btn::before {
+.heart-vide:hover {
   opacity: 0;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
-  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
 }
 
-.card-btn__like {
-  -webkit-transition-duration: .25s;
-          transition-duration: .25s;
-  background-color: #f6f6f6;
+/*A REFAIRE COURS CSS OPEN*/
+.emote-cards {
+  background: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 90px;
+  border-radius: 0 0 20px 20px;
+  background-color: transparent;
+  width: 20%;
+}
+
+.emote-cards-hearth {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 20px;
+  width: 30px;
+}
+
+.emote-cards::before {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
+  opacity: 0;
+  -webkit-transition: .5s;
+  transition: .5s;
+  content: "";
+  background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), to(#ff79da));
+  background: linear-gradient(0deg, #9356dc, #ff79da);
+}
+
+/*
+  height: 2rem;
+  width: 2rem;
+  background-color: transparent;
+  border: 0 solid transparent;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+   
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s;
+    content: "";
+    background: linear-gradient(0deg,#9356dc,#ff79da);
+  }
+
+  &__like {
+    transition-duration: .25s;
+background-color: #f6f6f6;
+display: flex;
+align-items: center;
+justify-content: center;
+mix-blend-mode: lighten;
+  }
+
+
+  &:hover {
+    .menu__like {
+      &--noBg {
+        opacity: 0;
+      }
+    }
+  }
+}/*A REFAIRE COURS CSS OPEN*/
+@-webkit-keyframes itemAppear {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes itemAppear {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes jump {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  25% {
+    -webkit-transform: translateY(0.5rem);
+            transform: translateY(0.5rem);
+  }
+  75% {
+    -webkit-transform: translateY(-0.5rem);
+            transform: translateY(-0.5rem);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes jump {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  25% {
+    -webkit-transform: translateY(0.5rem);
+            transform: translateY(0.5rem);
+  }
+  75% {
+    -webkit-transform: translateY(-0.5rem);
+            transform: translateY(-0.5rem);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.loader {
+  height: 100%;
+  background: rgba(255, 255, 255, 0.85);
+  margin: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+  -webkit-animation: spinner 3s ease-in-out;
+          animation: spinner 3s ease-in-out;
+  visibility: hidden;
+}
+
+.loader-anim {
   display: -webkit-box;
   display: -ms-flexbox;
+  display: flex;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -92,10 +242,84 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  mix-blend-mode: lighten;
+  border: 10px solid transparent;
+  border-top: 10px solid #9356DC;
+  border-bottom: 10px solid #FF79DA;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-animation: spinner-border 3s ease-in-out;
+          animation: spinner-border 3s ease-in-out;
+  z-index: 10;
+  visibility: hidden;
 }
 
-/*A REFAIRE COURS CSS OPEN*/
+@-webkit-keyframes spinner {
+  0% {
+    visibility: visible;
+    opacity: 0.9;
+  }
+  70% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes spinner {
+  0% {
+    visibility: visible;
+    opacity: 0.9;
+  }
+  70% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes spinner-border {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes spinner-border {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
 /*FONT-size-style-family-weight*/
 /*TAILLE*/
 /*PLACEMENT*/
@@ -132,67 +356,158 @@
 
 /*FIN BTN SECT1*/
 /*ANIMATION COEUR NEMESIS*/
-/*A REFAIRE COURS CSS OPEN*/
-.card-btn {
-  height: 2rem;
-  width: 2rem;
-  background-color: transparent;
-  border: transparent 0px solid;
-  padding: 0;
+.hearth {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  margin-right: 20px;
+  width: 30px;
+  stroke-width: 30;
   cursor: pointer;
+  fill: #ffffff;
+  stroke: #000000;
+}
+
+.heart-full {
+  position: absolute;
+  fill: url(#text-fill);
+  stroke: none;
+  width: 50px;
+}
+
+.heart-vide {
+  width: 50px;
   position: relative;
-  background-color: black;
+  fill: #ffffff;
 }
 
-.card-btn:hover::before {
-  opacity: 1;
-}
-
-.card-btn::before {
+.heart-vide:hover {
   opacity: 0;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
-  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
 }
 
-.card-btn__like {
-  -webkit-transition-duration: .25s;
-          transition-duration: .25s;
-  background-color: #f6f6f6;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
+/*A REFAIRE COURS CSS OPEN*/
+.emote-cards {
+  background: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 90px;
+  border-radius: 0 0 20px 20px;
+  background-color: transparent;
+  width: 20%;
+}
+
+.emote-cards-hearth {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  mix-blend-mode: lighten;
+  margin-right: 20px;
+  width: 30px;
 }
 
-/*A REFAIRE COURS CSS OPEN*/
+.emote-cards::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: .5s;
+  transition: .5s;
+  content: "";
+  background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), to(#ff79da));
+  background: linear-gradient(0deg, #9356dc, #ff79da);
+}
+
+/*
+  height: 2rem;
+  width: 2rem;
+  background-color: transparent;
+  border: 0 solid transparent;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+   
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s;
+    content: "";
+    background: linear-gradient(0deg,#9356dc,#ff79da);
+  }
+
+  &__like {
+    transition-duration: .25s;
+background-color: #f6f6f6;
+display: flex;
+align-items: center;
+justify-content: center;
+mix-blend-mode: lighten;
+  }
+
+
+  &:hover {
+    .menu__like {
+      &--noBg {
+        opacity: 0;
+      }
+    }
+  }
+}/*A REFAIRE COURS CSS OPEN*/
+@keyframes itemAppear {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes jump {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  25% {
+    -webkit-transform: translateY(0.5rem);
+            transform: translateY(0.5rem);
+  }
+  75% {
+    -webkit-transform: translateY(-0.5rem);
+            transform: translateY(-0.5rem);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
 body, html {
   margin: 0;
   font-family: 'Roboto', sans-serif;
@@ -321,67 +636,158 @@ a:link {
 
 /*FIN BTN SECT1*/
 /*ANIMATION COEUR NEMESIS*/
-/*A REFAIRE COURS CSS OPEN*/
-.card-btn {
-  height: 2rem;
-  width: 2rem;
-  background-color: transparent;
-  border: transparent 0px solid;
-  padding: 0;
+.hearth {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  margin-right: 20px;
+  width: 30px;
+  stroke-width: 30;
   cursor: pointer;
+  fill: #ffffff;
+  stroke: #000000;
+}
+
+.heart-full {
+  position: absolute;
+  fill: url(#text-fill);
+  stroke: none;
+  width: 50px;
+}
+
+.heart-vide {
+  width: 50px;
   position: relative;
-  background-color: black;
+  fill: #ffffff;
 }
 
-.card-btn:hover::before {
-  opacity: 1;
-}
-
-.card-btn::before {
+.heart-vide:hover {
   opacity: 0;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
-  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
 }
 
-.card-btn__like {
-  -webkit-transition-duration: .25s;
-          transition-duration: .25s;
-  background-color: #f6f6f6;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
+/*A REFAIRE COURS CSS OPEN*/
+.emote-cards {
+  background: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 90px;
+  border-radius: 0 0 20px 20px;
+  background-color: transparent;
+  width: 20%;
+}
+
+.emote-cards-hearth {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  mix-blend-mode: lighten;
+  margin-right: 20px;
+  width: 30px;
 }
 
-/*A REFAIRE COURS CSS OPEN*/
+.emote-cards::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: .5s;
+  transition: .5s;
+  content: "";
+  background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), to(#ff79da));
+  background: linear-gradient(0deg, #9356dc, #ff79da);
+}
+
+/*
+  height: 2rem;
+  width: 2rem;
+  background-color: transparent;
+  border: 0 solid transparent;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+   
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s;
+    content: "";
+    background: linear-gradient(0deg,#9356dc,#ff79da);
+  }
+
+  &__like {
+    transition-duration: .25s;
+background-color: #f6f6f6;
+display: flex;
+align-items: center;
+justify-content: center;
+mix-blend-mode: lighten;
+  }
+
+
+  &:hover {
+    .menu__like {
+      &--noBg {
+        opacity: 0;
+      }
+    }
+  }
+}/*A REFAIRE COURS CSS OPEN*/
+@keyframes itemAppear {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes jump {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  25% {
+    -webkit-transform: translateY(0.5rem);
+            transform: translateY(0.5rem);
+  }
+  75% {
+    -webkit-transform: translateY(-0.5rem);
+            transform: translateY(-0.5rem);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
 .section-1 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -464,67 +870,158 @@ a:link {
 
 /*FIN BTN SECT1*/
 /*ANIMATION COEUR NEMESIS*/
-/*A REFAIRE COURS CSS OPEN*/
-.card-btn {
-  height: 2rem;
-  width: 2rem;
-  background-color: transparent;
-  border: transparent 0px solid;
-  padding: 0;
+.hearth {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  margin-right: 20px;
+  width: 30px;
+  stroke-width: 30;
   cursor: pointer;
+  fill: #ffffff;
+  stroke: #000000;
+}
+
+.heart-full {
+  position: absolute;
+  fill: url(#text-fill);
+  stroke: none;
+  width: 50px;
+}
+
+.heart-vide {
+  width: 50px;
   position: relative;
-  background-color: black;
+  fill: #ffffff;
 }
 
-.card-btn:hover::before {
-  opacity: 1;
-}
-
-.card-btn::before {
+.heart-vide:hover {
   opacity: 0;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
-  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
 }
 
-.card-btn__like {
-  -webkit-transition-duration: .25s;
-          transition-duration: .25s;
-  background-color: #f6f6f6;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
+/*A REFAIRE COURS CSS OPEN*/
+.emote-cards {
+  background: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 90px;
+  border-radius: 0 0 20px 20px;
+  background-color: transparent;
+  width: 20%;
+}
+
+.emote-cards-hearth {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  mix-blend-mode: lighten;
+  margin-right: 20px;
+  width: 30px;
 }
 
-/*A REFAIRE COURS CSS OPEN*/
+.emote-cards::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: .5s;
+  transition: .5s;
+  content: "";
+  background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), to(#ff79da));
+  background: linear-gradient(0deg, #9356dc, #ff79da);
+}
+
+/*
+  height: 2rem;
+  width: 2rem;
+  background-color: transparent;
+  border: 0 solid transparent;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+   
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s;
+    content: "";
+    background: linear-gradient(0deg,#9356dc,#ff79da);
+  }
+
+  &__like {
+    transition-duration: .25s;
+background-color: #f6f6f6;
+display: flex;
+align-items: center;
+justify-content: center;
+mix-blend-mode: lighten;
+  }
+
+
+  &:hover {
+    .menu__like {
+      &--noBg {
+        opacity: 0;
+      }
+    }
+  }
+}/*A REFAIRE COURS CSS OPEN*/
+@keyframes itemAppear {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes jump {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  25% {
+    -webkit-transform: translateY(0.5rem);
+            transform: translateY(0.5rem);
+  }
+  75% {
+    -webkit-transform: translateY(-0.5rem);
+            transform: translateY(-0.5rem);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
 .section-2 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -558,22 +1055,9 @@ a:link {
           justify-content: left;
 }
 
-.section-2 .ol {
-  counter-reset: Choix;
-  /* Creates a new instance of the
-                                            section counter with each ol
-                                            element */
-  list-style-type: none;
-}
-
 .section-2 li::before {
   counter-increment: Choix 1;
-  /* Increments only this instance
-                                            of the section counter */
   content: counters(Choix, "1");
-  /* Combines the values of all instances
-                                            of the section counter, separated
-                                            by a period */
   height: 1.5rem;
   width: 1.5rem;
   border-radius: 100px;
@@ -606,6 +1090,11 @@ a:link {
   }
 }
 
+.section-2 .ol-fonction {
+  counter-reset: Choix;
+  list-style-type: "";
+}
+
 .section-2 .parent-ol {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -628,6 +1117,8 @@ a:link {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    counter-reset: Choix;
+    list-style-type: "";
   }
 }
 
@@ -656,6 +1147,7 @@ a:link {
   padding: 3%;
   -webkit-box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
           box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
+  /*fin media*/
   /*END li-txt*/
   /*FIN tuto__icon*/
 }
@@ -735,67 +1227,158 @@ a:link {
 
 /*FIN BTN SECT1*/
 /*ANIMATION COEUR NEMESIS*/
-/*A REFAIRE COURS CSS OPEN*/
-.card-btn {
-  height: 2rem;
-  width: 2rem;
-  background-color: transparent;
-  border: transparent 0px solid;
-  padding: 0;
+.hearth {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  margin-right: 20px;
+  width: 30px;
+  stroke-width: 30;
   cursor: pointer;
+  fill: #ffffff;
+  stroke: #000000;
+}
+
+.heart-full {
+  position: absolute;
+  fill: url(#text-fill);
+  stroke: none;
+  width: 50px;
+}
+
+.heart-vide {
+  width: 50px;
   position: relative;
-  background-color: black;
+  fill: #ffffff;
 }
 
-.card-btn:hover::before {
-  opacity: 1;
-}
-
-.card-btn::before {
+.heart-vide:hover {
   opacity: 0;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
-  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
 }
 
-.card-btn__like {
-  -webkit-transition-duration: .25s;
-          transition-duration: .25s;
-  background-color: #f6f6f6;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
+/*A REFAIRE COURS CSS OPEN*/
+.emote-cards {
+  background: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 90px;
+  border-radius: 0 0 20px 20px;
+  background-color: transparent;
+  width: 20%;
+}
+
+.emote-cards-hearth {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  mix-blend-mode: lighten;
+  margin-right: 20px;
+  width: 30px;
 }
 
-/*A REFAIRE COURS CSS OPEN*/
+.emote-cards::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: .5s;
+  transition: .5s;
+  content: "";
+  background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), to(#ff79da));
+  background: linear-gradient(0deg, #9356dc, #ff79da);
+}
+
+/*
+  height: 2rem;
+  width: 2rem;
+  background-color: transparent;
+  border: 0 solid transparent;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+   
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s;
+    content: "";
+    background: linear-gradient(0deg,#9356dc,#ff79da);
+  }
+
+  &__like {
+    transition-duration: .25s;
+background-color: #f6f6f6;
+display: flex;
+align-items: center;
+justify-content: center;
+mix-blend-mode: lighten;
+  }
+
+
+  &:hover {
+    .menu__like {
+      &--noBg {
+        opacity: 0;
+      }
+    }
+  }
+}/*A REFAIRE COURS CSS OPEN*/
+@keyframes itemAppear {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes jump {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  25% {
+    -webkit-transform: translateY(0.5rem);
+            transform: translateY(0.5rem);
+  }
+  75% {
+    -webkit-transform: translateY(-0.5rem);
+            transform: translateY(-0.5rem);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
 .section-3 {
   background-color: #f0dede7a;
   padding: 2%;
@@ -945,67 +1528,158 @@ a:link {
 
 /*FIN BTN SECT1*/
 /*ANIMATION COEUR NEMESIS*/
-/*A REFAIRE COURS CSS OPEN*/
-.card-btn {
-  height: 2rem;
-  width: 2rem;
-  background-color: transparent;
-  border: transparent 0px solid;
-  padding: 0;
+.hearth {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  margin-right: 20px;
+  width: 30px;
+  stroke-width: 30;
   cursor: pointer;
+  fill: #ffffff;
+  stroke: #000000;
+}
+
+.heart-full {
+  position: absolute;
+  fill: url(#text-fill);
+  stroke: none;
+  width: 50px;
+}
+
+.heart-vide {
+  width: 50px;
   position: relative;
-  background-color: black;
+  fill: #ffffff;
 }
 
-.card-btn:hover::before {
-  opacity: 1;
-}
-
-.card-btn::before {
+.heart-vide:hover {
   opacity: 0;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
-  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
 }
 
-.card-btn__like {
-  -webkit-transition-duration: .25s;
-          transition-duration: .25s;
-  background-color: #f6f6f6;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
+/*A REFAIRE COURS CSS OPEN*/
+.emote-cards {
+  background: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 90px;
+  border-radius: 0 0 20px 20px;
+  background-color: transparent;
+  width: 20%;
+}
+
+.emote-cards-hearth {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  mix-blend-mode: lighten;
+  margin-right: 20px;
+  width: 30px;
 }
 
-/*A REFAIRE COURS CSS OPEN*/
+.emote-cards::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: .5s;
+  transition: .5s;
+  content: "";
+  background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), to(#ff79da));
+  background: linear-gradient(0deg, #9356dc, #ff79da);
+}
+
+/*
+  height: 2rem;
+  width: 2rem;
+  background-color: transparent;
+  border: 0 solid transparent;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+   
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s;
+    content: "";
+    background: linear-gradient(0deg,#9356dc,#ff79da);
+  }
+
+  &__like {
+    transition-duration: .25s;
+background-color: #f6f6f6;
+display: flex;
+align-items: center;
+justify-content: center;
+mix-blend-mode: lighten;
+  }
+
+
+  &:hover {
+    .menu__like {
+      &--noBg {
+        opacity: 0;
+      }
+    }
+  }
+}/*A REFAIRE COURS CSS OPEN*/
+@keyframes itemAppear {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes jump {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  25% {
+    -webkit-transform: translateY(0.5rem);
+            transform: translateY(0.5rem);
+  }
+  75% {
+    -webkit-transform: translateY(-0.5rem);
+            transform: translateY(-0.5rem);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
 .footer {
   background-color: #353535;
   color: #ffffff;
@@ -1094,7 +1768,7 @@ a:link {
   background-color: #f6f6f6;
   border-top-left-radius: 2rem;
   border-top-right-radius: 2rem;
-  margin-top: -8%;
+  margin-top: -17%;
   position: relative;
   padding: 4%;
 }
@@ -1197,12 +1871,61 @@ a:link {
   cursor: pointer;
   -webkit-animation: itemAppear .6s;
           animation: itemAppear .6s;
+  -webkit-animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+          animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 
 .menu-plats:hover {
   background-color: #fff;
   -webkit-box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
           box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+}
+
+.delay-0 {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+.delay-1 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+.delay-2 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.delay-3 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.delay-4 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.delay-5 {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.delay-6 {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.delay-7 {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+
+.delay-8 {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
 }
 
 .menu-txt__bold {

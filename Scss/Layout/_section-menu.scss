@@ -2,7 +2,7 @@
     background-color: #f6f6f6;
 border-top-left-radius: 2rem;
 border-top-right-radius: 2rem;
-margin-top: -8%;
+margin-top: -17%;
 position: relative;
 padding: 4%;
 }
@@ -76,11 +76,20 @@ padding: 4%;
     overflow: hidden;
     cursor: pointer;
     animation: itemAppear .6s;
+    animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
+    animation-fill-mode: both;
+
     &:hover{
         background-color: #fff;
         box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
        }
 }
+@for $i from 0 to 9 {
+    .delay-#{$i} {
+      animation-delay:  #{$i/10}s;
+    }
+  }
+
 
 .menu-txt__bold{
     margin-bottom: 0px;
