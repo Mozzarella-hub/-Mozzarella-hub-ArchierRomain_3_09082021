@@ -35,7 +35,7 @@
 
 /*FIN BTN SECT1*/
 /*ANIMATION COEUR NEMESIS*/
-.hearth {
+.emote-cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -43,78 +43,48 @@
       -ms-flex-align: center;
           align-items: center;
   margin-right: 20px;
+  width: 50px;
+}
+
+.heart {
   width: 30px;
   stroke-width: 30;
+  stroke: black;
+  fill: white;
   cursor: pointer;
-  fill: #ffffff;
-  stroke: #000000;
 }
 
 .heart-full {
+  opacity: 0;
+  width: 30px;
   position: absolute;
   fill: url(#text-fill);
   stroke: none;
-  width: 50px;
+}
+
+.heart-full:hover {
+  opacity: 1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  z-index: 10;
 }
 
 .heart-vide {
-  width: 50px;
-  position: relative;
-  fill: #ffffff;
+  stroke-width: 20;
+  stroke: black;
+  cursor: pointer;
+  color: white;
+  width: 30px;
 }
 
 .heart-vide:hover {
   opacity: 0;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  z-index: -100;
 }
 
 /*A REFAIRE COURS CSS OPEN*/
-.emote-cards {
-  background: #ffffff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 90px;
-  border-radius: 0 0 20px 20px;
-  background-color: transparent;
-  width: 20%;
-}
-
-.emote-cards-hearth {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-right: 20px;
-  width: 30px;
-}
-
-.emote-cards::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  -webkit-transition: .5s;
-  transition: .5s;
-  content: "";
-  background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), to(#ff79da));
-  background: linear-gradient(0deg, #9356dc, #ff79da);
-}
-
 /*
   height: 2rem;
   width: 2rem;
@@ -213,6 +183,52 @@ mix-blend-mode: lighten;
   100% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes slideInRight {
+  0% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+/*placer anim: both*/
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
@@ -356,7 +372,7 @@ mix-blend-mode: lighten;
 
 /*FIN BTN SECT1*/
 /*ANIMATION COEUR NEMESIS*/
-.hearth {
+.emote-cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -364,78 +380,48 @@ mix-blend-mode: lighten;
       -ms-flex-align: center;
           align-items: center;
   margin-right: 20px;
+  width: 50px;
+}
+
+.heart {
   width: 30px;
   stroke-width: 30;
+  stroke: black;
+  fill: white;
   cursor: pointer;
-  fill: #ffffff;
-  stroke: #000000;
 }
 
 .heart-full {
+  opacity: 0;
+  width: 30px;
   position: absolute;
   fill: url(#text-fill);
   stroke: none;
-  width: 50px;
+}
+
+.heart-full:hover {
+  opacity: 1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  z-index: 10;
 }
 
 .heart-vide {
-  width: 50px;
-  position: relative;
-  fill: #ffffff;
+  stroke-width: 20;
+  stroke: black;
+  cursor: pointer;
+  color: white;
+  width: 30px;
 }
 
 .heart-vide:hover {
   opacity: 0;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  z-index: -100;
 }
 
 /*A REFAIRE COURS CSS OPEN*/
-.emote-cards {
-  background: #ffffff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 90px;
-  border-radius: 0 0 20px 20px;
-  background-color: transparent;
-  width: 20%;
-}
-
-.emote-cards-hearth {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-right: 20px;
-  width: 30px;
-}
-
-.emote-cards::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  -webkit-transition: .5s;
-  transition: .5s;
-  content: "";
-  background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), to(#ff79da));
-  background: linear-gradient(0deg, #9356dc, #ff79da);
-}
-
 /*
   height: 2rem;
   width: 2rem;
@@ -505,6 +491,30 @@ mix-blend-mode: lighten;
   100% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+/*placer anim: both*/
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
@@ -636,7 +646,7 @@ a:link {
 
 /*FIN BTN SECT1*/
 /*ANIMATION COEUR NEMESIS*/
-.hearth {
+.emote-cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -644,78 +654,48 @@ a:link {
       -ms-flex-align: center;
           align-items: center;
   margin-right: 20px;
+  width: 50px;
+}
+
+.heart {
   width: 30px;
   stroke-width: 30;
+  stroke: black;
+  fill: white;
   cursor: pointer;
-  fill: #ffffff;
-  stroke: #000000;
 }
 
 .heart-full {
+  opacity: 0;
+  width: 30px;
   position: absolute;
   fill: url(#text-fill);
   stroke: none;
-  width: 50px;
+}
+
+.heart-full:hover {
+  opacity: 1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  z-index: 10;
 }
 
 .heart-vide {
-  width: 50px;
-  position: relative;
-  fill: #ffffff;
+  stroke-width: 20;
+  stroke: black;
+  cursor: pointer;
+  color: white;
+  width: 30px;
 }
 
 .heart-vide:hover {
   opacity: 0;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  z-index: -100;
 }
 
 /*A REFAIRE COURS CSS OPEN*/
-.emote-cards {
-  background: #ffffff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 90px;
-  border-radius: 0 0 20px 20px;
-  background-color: transparent;
-  width: 20%;
-}
-
-.emote-cards-hearth {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-right: 20px;
-  width: 30px;
-}
-
-.emote-cards::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  -webkit-transition: .5s;
-  transition: .5s;
-  content: "";
-  background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), to(#ff79da));
-  background: linear-gradient(0deg, #9356dc, #ff79da);
-}
-
 /*
   height: 2rem;
   width: 2rem;
@@ -785,6 +765,30 @@ mix-blend-mode: lighten;
   100% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+/*placer anim: both*/
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
@@ -870,7 +874,7 @@ mix-blend-mode: lighten;
 
 /*FIN BTN SECT1*/
 /*ANIMATION COEUR NEMESIS*/
-.hearth {
+.emote-cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -878,78 +882,48 @@ mix-blend-mode: lighten;
       -ms-flex-align: center;
           align-items: center;
   margin-right: 20px;
+  width: 50px;
+}
+
+.heart {
   width: 30px;
   stroke-width: 30;
+  stroke: black;
+  fill: white;
   cursor: pointer;
-  fill: #ffffff;
-  stroke: #000000;
 }
 
 .heart-full {
+  opacity: 0;
+  width: 30px;
   position: absolute;
   fill: url(#text-fill);
   stroke: none;
-  width: 50px;
+}
+
+.heart-full:hover {
+  opacity: 1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  z-index: 10;
 }
 
 .heart-vide {
-  width: 50px;
-  position: relative;
-  fill: #ffffff;
+  stroke-width: 20;
+  stroke: black;
+  cursor: pointer;
+  color: white;
+  width: 30px;
 }
 
 .heart-vide:hover {
   opacity: 0;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  z-index: -100;
 }
 
 /*A REFAIRE COURS CSS OPEN*/
-.emote-cards {
-  background: #ffffff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 90px;
-  border-radius: 0 0 20px 20px;
-  background-color: transparent;
-  width: 20%;
-}
-
-.emote-cards-hearth {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-right: 20px;
-  width: 30px;
-}
-
-.emote-cards::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  -webkit-transition: .5s;
-  transition: .5s;
-  content: "";
-  background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), to(#ff79da));
-  background: linear-gradient(0deg, #9356dc, #ff79da);
-}
-
 /*
   height: 2rem;
   width: 2rem;
@@ -1019,6 +993,30 @@ mix-blend-mode: lighten;
   100% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+/*placer anim: both*/
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
@@ -1227,7 +1225,7 @@ mix-blend-mode: lighten;
 
 /*FIN BTN SECT1*/
 /*ANIMATION COEUR NEMESIS*/
-.hearth {
+.emote-cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1235,78 +1233,48 @@ mix-blend-mode: lighten;
       -ms-flex-align: center;
           align-items: center;
   margin-right: 20px;
+  width: 50px;
+}
+
+.heart {
   width: 30px;
   stroke-width: 30;
+  stroke: black;
+  fill: white;
   cursor: pointer;
-  fill: #ffffff;
-  stroke: #000000;
 }
 
 .heart-full {
+  opacity: 0;
+  width: 30px;
   position: absolute;
   fill: url(#text-fill);
   stroke: none;
-  width: 50px;
+}
+
+.heart-full:hover {
+  opacity: 1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  z-index: 10;
 }
 
 .heart-vide {
-  width: 50px;
-  position: relative;
-  fill: #ffffff;
+  stroke-width: 20;
+  stroke: black;
+  cursor: pointer;
+  color: white;
+  width: 30px;
 }
 
 .heart-vide:hover {
   opacity: 0;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  z-index: -100;
 }
 
 /*A REFAIRE COURS CSS OPEN*/
-.emote-cards {
-  background: #ffffff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 90px;
-  border-radius: 0 0 20px 20px;
-  background-color: transparent;
-  width: 20%;
-}
-
-.emote-cards-hearth {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-right: 20px;
-  width: 30px;
-}
-
-.emote-cards::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  -webkit-transition: .5s;
-  transition: .5s;
-  content: "";
-  background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), to(#ff79da));
-  background: linear-gradient(0deg, #9356dc, #ff79da);
-}
-
 /*
   height: 2rem;
   width: 2rem;
@@ -1376,6 +1344,30 @@ mix-blend-mode: lighten;
   100% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+/*placer anim: both*/
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
@@ -1528,7 +1520,7 @@ mix-blend-mode: lighten;
 
 /*FIN BTN SECT1*/
 /*ANIMATION COEUR NEMESIS*/
-.hearth {
+.emote-cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1536,78 +1528,48 @@ mix-blend-mode: lighten;
       -ms-flex-align: center;
           align-items: center;
   margin-right: 20px;
+  width: 50px;
+}
+
+.heart {
   width: 30px;
   stroke-width: 30;
+  stroke: black;
+  fill: white;
   cursor: pointer;
-  fill: #ffffff;
-  stroke: #000000;
 }
 
 .heart-full {
+  opacity: 0;
+  width: 30px;
   position: absolute;
   fill: url(#text-fill);
   stroke: none;
-  width: 50px;
+}
+
+.heart-full:hover {
+  opacity: 1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  z-index: 10;
 }
 
 .heart-vide {
-  width: 50px;
-  position: relative;
-  fill: #ffffff;
+  stroke-width: 20;
+  stroke: black;
+  cursor: pointer;
+  color: white;
+  width: 30px;
 }
 
 .heart-vide:hover {
   opacity: 0;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  z-index: -100;
 }
 
 /*A REFAIRE COURS CSS OPEN*/
-.emote-cards {
-  background: #ffffff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 90px;
-  border-radius: 0 0 20px 20px;
-  background-color: transparent;
-  width: 20%;
-}
-
-.emote-cards-hearth {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-right: 20px;
-  width: 30px;
-}
-
-.emote-cards::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  -webkit-transition: .5s;
-  transition: .5s;
-  content: "";
-  background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), to(#ff79da));
-  background: linear-gradient(0deg, #9356dc, #ff79da);
-}
-
 /*
   height: 2rem;
   width: 2rem;
@@ -1677,6 +1639,30 @@ mix-blend-mode: lighten;
   100% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+/*placer anim: both*/
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
@@ -1883,64 +1869,69 @@ mix-blend-mode: lighten;
           box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
 }
 
-.delay-0 {
+.menu-plats .delay-0 {
   -webkit-animation-delay: 0s;
           animation-delay: 0s;
 }
 
-.delay-1 {
+.menu-plats .delay-1 {
   -webkit-animation-delay: 0.1s;
           animation-delay: 0.1s;
 }
 
-.delay-2 {
+.menu-plats .delay-2 {
   -webkit-animation-delay: 0.2s;
           animation-delay: 0.2s;
 }
 
-.delay-3 {
+.menu-plats .delay-3 {
   -webkit-animation-delay: 0.3s;
           animation-delay: 0.3s;
 }
 
-.delay-4 {
+.menu-plats .delay-4 {
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
 
-.delay-5 {
+.menu-plats .delay-5 {
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
 }
 
-.delay-6 {
+.menu-plats .delay-6 {
   -webkit-animation-delay: 0.6s;
           animation-delay: 0.6s;
 }
 
-.delay-7 {
+.menu-plats .delay-7 {
   -webkit-animation-delay: 0.7s;
           animation-delay: 0.7s;
 }
 
-.delay-8 {
+.menu-plats .delay-8 {
   -webkit-animation-delay: 0.8s;
           animation-delay: 0.8s;
 }
 
-.menu-txt__bold {
+.menu-plats .menu-txt {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.menu-plats .menu-txt__bold {
   margin-bottom: 0px;
   margin-top: 0px;
   font-weight: bold;
   font-size: large;
 }
 
-.menu-txt__description {
+.menu-plats .menu-txt__description {
   margin-top: 0px;
   margin-bottom: 0px;
 }
 
-.menu-price {
+.menu-plats .menu-price {
   font-weight: 700;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1954,53 +1945,71 @@ mix-blend-mode: lighten;
   padding-left: .5rem;
 }
 
-.menu-confirmation__anim {
-  background-color: #99e2d0;
-  margin: -1rem -5rem -1rem 1rem;
-  width: 4rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-transition-duration: .5s;
-          transition-duration: .5s;
+.menu-plats .menu-price:hover {
+  padding-right: 70px;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
-.menu-confirmation__anim:hover {
+.menu-plats .menu-confirmation__anim {
+  display: none;
+  position: absolute;
+  background: #99E2D0;
+  border-radius: 0 15px 15px 0;
+  right: 0px;
+  padding: 0 13px;
+  height: 100%;
+}
+
+.menu-plats .menu-confirmation__anim:hover {
   margin-right: -1rem;
-}
-
-.menuItem-icon_wrap {
-  height: 1.6rem;
-  width: 1.6rem;
-  background-color: #fff;
+  -webkit-animation: slideInRight 0.5s both;
+          animation: slideInRight 0.5s both;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+.menu-plats .icon-confirmation-wrap {
+  font-size: 30px;
+  color: white;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  -webkit-animation: rotate 0.5s both;
+  animation: rotate 0.5s both;
+}
+
+.menu-plats .icon-confirmation-wrap:hover {
+  margin-right: -1rem;
+  -webkit-animation: slideInRight 0.5s both;
+          animation: slideInRight 0.5s both;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-radius: 100px;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-  -webkit-transition-duration: .5s;
-          transition-duration: .5s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform-origin: right;
+          transform-origin: right;
 }
 
-.menuItem-icon_wrap:hover {
-  -webkit-transform: rotate(0);
-          transform: rotate(0);
+.menu-plats .menuItem__icon {
+  font-size: 30px;
+  color: white;
+  -webkit-animation: rotate 0.5s both;
+          animation: rotate 0.5s both;
 }
 
-.menuItem__icon {
-  color: #99E2D0;
-}
+/*fin menu plats*/
 /*# sourceMappingURL=main.css.map */

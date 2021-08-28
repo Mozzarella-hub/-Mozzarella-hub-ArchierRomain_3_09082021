@@ -83,23 +83,27 @@ padding: 4%;
         background-color: #fff;
         box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
        }
-}
+
 @for $i from 0 to 9 {
     .delay-#{$i} {
       animation-delay:  #{$i/10}s;
     }
   }
 
+.menu-txt{
+    white-space: nowrap;
+    overflow: hidden;
 
-.menu-txt__bold{
+&__bold{
     margin-bottom: 0px;
     margin-top: 0px;
     font-weight: bold;
     font-size: large;
 }
-.menu-txt__description{
+&__description{
     margin-top: 0px;
 margin-bottom: 0px;
+}
 }
 
 
@@ -109,38 +113,53 @@ display: flex;
 justify-content: flex-end;
 align-items: flex-end;
 padding-left: .5rem;
+&:hover{padding-right: 70px;
+        transition: 0.5s ease;
+    }
 }
 
 .menu-confirmation__anim{
-    background-color: #99e2d0;
-margin: -1rem -5rem -1rem 1rem;
-width: 4rem;
-display: flex;
-align-items: center;
-justify-content: center;
-transition-duration: .5s;
+    display: none;
+    position: absolute;
+    background: #99E2D0;
+    border-radius: 0 15px 15px 0;
+    right: 0px;
+    padding: 0 13px;
+    height: 100%;
+
     &:hover{
     margin-right: -1rem;
+    animation: slideInRight 0.5s both;
+    justify-content: center;
+    @include PositionCenter;
+    transform-origin: right;
+    }
 }
+
+
+
+
+.icon-confirmation-wrap{
+    font-size: 30px;
+    color: white;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    -webkit-animation: rotate 0.5s both;
+    animation: rotate 0.5s both;
+
+    &:hover{
+        margin-right: -1rem;
+        animation: slideInRight 0.5s both;
+        justify-content: center;
+        @include PositionCenter;
+        transform-origin: right;
+    }
 }
 
-
-.menuItem-icon_wrap{
-height: 1.6rem;
-width: 1.6rem;
-background-color: #fff;
-display: flex;
-align-items: center;
-justify-content: center;
-border-radius: 100px;
-transform: rotate(180deg);
-transition-duration: .5s;
-
-
-        &:hover {
-    transform: rotate(0);
-  }
+.menuItem__icon{
+    font-size: 30px;
+color: white;
+animation: rotate 0.5s both;
 }
-.menuItem__icon {
-    color: $color-tertiary;
-  }
+
+}/*fin menu plats*/
