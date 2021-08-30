@@ -1848,7 +1848,7 @@ mix-blend-mode: lighten;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  max-height: 32rem;
+  max-height: 60rem;
 }
 
 .section-menus {
