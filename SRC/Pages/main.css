@@ -2044,14 +2044,14 @@ mix-blend-mode: lighten;
   margin-bottom: 0px;
   margin-top: 0px;
   font-weight: bold;
-  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-size: clamp(17px, 3vw, 1.5rem);
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
 
 .menu-txt__description {
-  font-size: clamp(15px, 2vw, 1rem);
+  font-size: clamp(14px, 2vw, 1rem);
   margin-top: 0px;
   margin-bottom: 0px;
   white-space: nowrap;
