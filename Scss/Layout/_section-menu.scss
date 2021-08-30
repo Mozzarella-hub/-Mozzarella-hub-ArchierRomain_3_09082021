@@ -82,7 +82,19 @@ padding: 4%;
     &:hover{
         background-color: #fff;
         box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+        .menu-confirmation__anim {
+            @include PositionCenter;
+            animation: slide-left 0.5s ease ;
+            transform-origin: right;
+        }
+
        }
+
+       &:hover &__wrapIcon {
+        transform: rotate(0);
+      }
+    }
+
 
 @for $i from 0 to 9 {
     .delay-#{$i} {
@@ -99,67 +111,58 @@ padding: 4%;
     margin-top: 0px;
     font-weight: bold;
     font-size: large;
+    @include txt-overflow;
 }
 &__description{
     margin-top: 0px;
 margin-bottom: 0px;
+@include txt-overflow;
 }
 }
 
 
 .menu-price{
-font-weight: 700;
-display: flex;
-justify-content: flex-end;
-align-items: flex-end;
-padding-left: .5rem;
-&:hover{padding-right: 70px;
-        transition: 0.5s ease;
-    }
+    font-weight: 700;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-left: .5rem;
 }
 
 .menu-confirmation__anim{
+
     display: none;
-    position: absolute;
-    background: #99E2D0;
-    border-radius: 0 15px 15px 0;
-    right: 0px;
-    padding: 0 13px;
-    height: 100%;
-
-    &:hover{
-    margin-right: -1rem;
-    animation: slideInRight 0.5s both;
-    justify-content: center;
-    @include PositionCenter;
-    transform-origin: right;
+position: absolute;
+background: #99E2D0;
+right: 0px;
+padding: 0 13px;
+height: 100%;
+bottom: 0px;
     }
+
+
+
+
+    .icon-confirmation-wrap{
+        font-size: 30px;
+        color: white;
+        transform: rotate(180deg);
+        animation: rotate 0.5s both;
 }
 
-
-
-
-.icon-confirmation-wrap{
-    font-size: 30px;
-    color: white;
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
-    -webkit-animation: rotate 0.5s both;
-    animation: rotate 0.5s both;
-
-    &:hover{
-        margin-right: -1rem;
-        animation: slideInRight 0.5s both;
-        justify-content: center;
-        @include PositionCenter;
-        transform-origin: right;
-    }
-}
 
 .menuItem__icon{
-    font-size: 30px;
-color: white;
-animation: rotate 0.5s both;
+    color: #99e2d0;
+    background-color: $white;
+    border-radius: 100px;
+    padding: 5px;
+    font-size: 20px;
 }
 
-}/*fin menu plats*/
+/*fin menu plats*/
+
+.dimension-menu-btn{
+    width: 100%;
+display: flex;
+justify-content: center;
+}

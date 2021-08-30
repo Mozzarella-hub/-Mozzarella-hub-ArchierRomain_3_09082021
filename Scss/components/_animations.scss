@@ -25,14 +25,14 @@
   width: 30px;
   stroke-width: 30;
   stroke: black;
-  fill: white;
+  fill: url(#text-fill);
   cursor: pointer;
 }
 .heart-full {
 opacity: 0;
 width: 30px;
 position: absolute;
-fill: url(#text-fill);
+/*fill: url(#text-fill);*/
 stroke: none;
   &:hover {
   opacity: 1;
@@ -44,7 +44,7 @@ stroke: none;
   stroke-width: 20;
   stroke: black;
   cursor: pointer;
-  color: white; 
+  color: $white; 
   width: 30px;
     &:hover {
     opacity: 0;
@@ -130,15 +130,23 @@ mix-blend-mode: lighten;
 
 @keyframes slideInRight {
   0% {
-  -webkit-transform: translateX(100%);
   transform: translateX(100%);
   visibility: visible;
   }
   100% {
-  -webkit-transform: translateX(0);
+ 
   transform: translateX(0);
   }
   } /*placer anim: both*/
+
+  @keyframes slide-left {
+    0% {
+              transform: scaleX(0);
+    }
+    100% {
+              transform: scaleX(-50px);
+    }
+  }
 
   @keyframes rotate {
     0% {
