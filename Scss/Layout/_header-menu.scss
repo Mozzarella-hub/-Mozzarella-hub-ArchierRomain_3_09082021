@@ -5,7 +5,13 @@
 }
 
 .header-reglage{
-    margin-left: -11%;
+    position: absolute;
+    left: 2rem;
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
    .header__arrow
