@@ -1453,7 +1453,7 @@ mix-blend-mode: lighten;
   .contenaire-restaurants {
     display: -ms-grid;
     display: grid;
-    
+    -ms-grid-columns: (1fr, 2);
         grid-template-columns: repeat(2, 1fr);
     -webkit-column-gap: 2rem;
             column-gap: 2rem;
@@ -2160,6 +2160,7 @@ mix-blend-mode: lighten;
   padding-right: 60px;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
+  font-size: clamp(17px, 3vw, 1.5rem);
 }
 
 /*&:hover &__wrapIcon {

@@ -97,6 +97,7 @@ padding: 4%;
         .menu-price{
                 padding-right: 60px;
                 transition: 0.5s ease;
+                font-size: clamp(17px, 3vw, 1.5rem);
             }
         }
 
