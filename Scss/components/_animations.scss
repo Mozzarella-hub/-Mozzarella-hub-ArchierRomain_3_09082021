@@ -45,6 +45,7 @@ stroke: none;
   stroke: black;
   cursor: pointer;
   color: $white; 
+  fill: url(#text-fill);
   width: 30px;
     &:hover {
     opacity: 0;
@@ -127,7 +128,7 @@ mix-blend-mode: lighten;
 
 
 
-
+/*
 @keyframes slideInRight {
   0% {
   transform: translateX(100%);
@@ -138,6 +139,7 @@ mix-blend-mode: lighten;
   transform: translateX(0);
   }
   } /*placer anim: both*/
+
 
   @keyframes slide-left {
     0% {
