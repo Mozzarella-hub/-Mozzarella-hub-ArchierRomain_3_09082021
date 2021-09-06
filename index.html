@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>oh my food</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    
+        <link type="text/css" rel="stylesheet" href="../Pages/main.css">
+
+            <!--FAVICON-->
+        <link rel="apple-touch-icon" sizes="57x57" href="images/Favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="images/Favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/Favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="images/Favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/Favicon/favicon-96x96.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="images/Favicon/ms-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="images/Favicon/ms-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="images/Favicon/ms-icon-150x150.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/Favicon/ms-icon-150x150.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="images/Favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/Favicon/favicon-16x16.png">
+        <link rel="manifest" href="images/Favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+
+
+    </head>
+    <body>
+        <div class="loader"> 
+            <div class="loader-anim"></div>
+        </div>
+    <header>
+        <div class="logo-dimsension">
+            <h1 id="logo">ohmyfood</h1>
+        </div>
+    </header>
+
+        <div class="localisation-dimension">
+            <div class="epingle"><i class="fas fa-map-marker-alt"></i></div> 
+            <span class="localisation-texte">Paris, Belleville</span>
+        </div>
+    
+
+    <!-- ****SECTION**** ON PLACE BUTTON EXPLORER RESTO AINSI QUE H2 EN TEXTE-->
+    <section class="section-1">
+        <div class="section1-dimension-txt">
+            <h2 class="section-txt__bold">Réservez le menu qui <br>vous convient</h2>
+            <p class="section-txt__normal">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+        </div><!--fermeture du texte section 1-->
+        <div class="txt-btn_accueil"><button class="btn">Explorer nos restaurants</button></div>
+    </section>
+
+    <!--ON PLACE LES 3 LI EN COLUMN (FIRST MOBILE)-->
+    <section class="section-2">
+        <h2 class="section2-txt__bold- h2-left_mixin">Fonctionnement</h2>
+        <div class="parent-ol">
+        <ol class="ol-fonction">
+            <li class="section2-li">
+                <i class="fa-mobile-alt fas tuto__icon" aria-hidden="true"></i>
+                <p class="section2-li__txt">Choisissez un restaurant</p>
+            </li>
+            <li class="section2-li">
+                <i class="fa-list-ul fas tuto__icon" aria-hidden="true"></i>
+                <p class="section2-li__txt">Composer votre menu</p>
+            </li>
+            <li class="section2-li">
+                <i class="fa-store fas tuto__icon" aria-hidden="true"></i>
+                <p class="section2-li__txt">Déguster au restaurant</p>
+            </li>
+        </ol>
+        </div>
+    </section>
+
+    <!--ON PLACE LES CARDS RESTAURANTS REUTILISABLES-->
+    <section class="section-3">
+        <h2 class="section-txt_bold">Restaurants</h2>
+        <div class="contenaire-restaurants">
+
+            <a class="card-resto" href="../Pages/La-palette-du-gout.html">
+                <img class="img-resto" src="../../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Plat succulent"> 
+                    <span class="card-badge">Nouveau</span> 
+                <div class="card-footer"> 
+                    <div class="card-footer__txt"> 
+                        <h3 class="card-footer__title">La palette du goût</h3> 
+                        <span class="card-footer__subtitle">Ménilmontant</span>
+                    </div><!--FIN TXT CARD-->
+                <div class="card-btn">
+                    <div class="emote-cards"> 
+                        <svg class="heart heart-full" viewBox="-20 0 550 550" xml:space="preserve">
+                            <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path>
+                            <defs>
+                                <linearGradient id="text-fill">
+                                    <stop offset="0%" stop-color="#9356DC"></stop>
+                                    <stop offset="100%" stop-color="#FF79DA"></stop>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+        
+                        <svg class="hearth heart-vide" viewBox="-20 0 550 550" xml:space="preserve">
+                            <path fill="currentColor" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path>
+                            <defs>
+                                <linearGradient>
+                                    <stop offset="0%" stop-color="#9356DC"></stop>
+                                    <stop offset="0%" stop-color="#FF79DA"></stop>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div><!--FIN btn card-->
+                </div>
+                </div><!--FIN CARD FOOTER--> 
+            </a>
+            
+
+            <a class="card-resto" href="../Pages/La-note-enchantee.html">                 
+                <img class="img-resto" src="../../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Plat succulent"> 
+                    <span class="card-badge">Nouveau</span> 
+                    <div class="card-footer"> 
+                        <div class="card-footer__txt"> 
+                            <h3 class="card-footer__title">La note enchantée</h3> 
+                            <span class="card-footer__subtitle">Charonne</span>
+                        </div><!--FIN TXT CARD-->
+                    <div class="card-btn">
+                        <div class="emote-cards"> 
+                            <svg class="heart heart-full" viewBox="-20 0 550 550" xml:space="preserve">
+                                <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path>
+                                <defs>
+                                    <linearGradient>
+                                        <stop offset="0%" stop-color="#9356DC"></stop>
+                                        <stop offset="100%" stop-color="#FF79DA"></stop>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+            
+                            <svg class="hearth heart-vide" viewBox="-20 0 550 550" xml:space="preserve">
+                                <path fill="currentColor" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path>
+                                <defs>
+                                    <linearGradient>
+                                        <stop offset="0%" stop-color="#9356DC"></stop>
+                                        <stop offset="0%" stop-color="#FF79DA"></stop>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div><!--FIN btn card-->
+                    </div>
+                    </div><!--FIN CARD FOOTER-->  
+            </a><!--FIN CARD RESTO-->
+
+            <a class="card-resto" href="../Pages/A-la-francaise.html">                 
+                <img class="img-resto" src="../../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Plat succulent"> 
+                <span class="card-badge">Nouveau</span>
+                <div class="card-footer"> 
+                    <div class="card-footer__txt"> 
+                        <h3 class="card-footer__title">A la française</h3> 
+                        <span class="card-footer__subtitle">Cité rouge</span>
+                    </div><!--FIN TXT CARD-->
+                <div class="card-btn">
+                    <div class="emote-cards"> 
+                        <svg class="heart heart-full" viewBox="-20 0 550 550" xml:space="preserve">
+                            <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path>
+                            <defs>
+                                <linearGradient>
+                                    <stop offset="0%" stop-color="#9356DC"></stop>
+                                    <stop offset="100%" stop-color="#FF79DA"></stop>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+        
+                        <svg class="hearth heart-vide" viewBox="-20 0 550 550" xml:space="preserve">
+                            <path fill="currentColor" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path>
+                            <defs>
+                                <linearGradient>
+                                    <stop offset="0%" stop-color="#9356DC"></stop>
+                                    <stop offset="100%" stop-color="#FF79DA"></stop>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div><!--FIN btn card-->
+                </div>
+                </div><!--FIN CARD FOOTER-->  
+            </a><!--FIN CARD RESTO-->
+
+            <a class="card-resto" href="../Pages/Le-delice-des-sens.html">                 
+                <img class="img-resto" src="../../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Plat succulent">                     
+                <span class="card-badge">Nouveau</span>
+                <div class="card-footer"> 
+                    <div class="card-footer__txt"> 
+                        <h3 class="card-footer__title">Les délices des sens</h3> 
+                        <span class="card-footer__subtitle">Folie-Méricourt</span>
+                    </div><!--FIN TXT CARD-->
+                <div class="card-btn">
+                    <div class="emote-cards"> 
+                        <svg class="heart heart-full" viewBox="-20 0 550 550" xml:space="preserve">
+                            <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path>
+                            <defs>
+                                <linearGradient>
+                                    <stop offset="0%" stop-color="#9356DC"></stop>
+                                    <stop offset="100%" stop-color="#FF79DA"></stop>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+        
+                        <svg class="hearth heart-vide" viewBox="-20 0 550 550" xml:space="preserve">
+                            <path fill="currentColor" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path>
+                            <defs>
+                                <linearGradient>
+                                    <stop offset="0%" stop-color="#9356DC"></stop>
+                                    <stop offset="0%" stop-color="#FF79DA"></stop>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div><!--FIN emote card-->
+                </div>
+                </div><!--FIN CARD FOOTER-->  
+            </a><!--FIN CARD RESTO-->
+            
+        </div><!--FIN CONTENAIRE RESTAURANTS-->
+    </section>
+
+    <footer class="footer">
+        <p class="footer-logo">ohmyfood</p>
+        <ul class="footer-ul">
+
+            <li class="footer-ul__li">
+                <i class="fa-utensils fas footer__icon" aria-hidden="true"></i>
+                <a  href="#" class="footer-txt">Proposer un restaurant</a>
+            </li>
+
+            <li class="footer-ul__li">
+                <i class="fa-hands-helping fas footer__icon" aria-hidden="true"></i>
+                <a  href="#" class="footer-txt">Devenir partenaire</a>
+            </li>
+
+            <li class="footer-ul__li" >
+                <a href="#" class="footer-txt">Mentions légales </a>
+            </li>
+
+            <li class="footer-ul__li">
+                <a class="footer-txt" href="mailto:contact@homyfood.com"> Contact </a>
+            </li>
+
+        </ul>
+    </footer>
+    
+
+    </body>
+</html>
