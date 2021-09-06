@@ -1,0 +1,14 @@
+{
+  "name": "pages",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "sass --watch ./sass/main.scss:.public/css/style.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@snowpack/plugin-sass": "^1.4.0"
+  }
+}
