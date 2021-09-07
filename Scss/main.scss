@@ -1,16 +1,16 @@
-@import '../../Scss/Untils/Mixins';
-@import '../../Scss/Untils/Variables';
-@import '../../Scss/components/animations';
-@import '../../Scss/components/fonctions';
+@import 'utils/Mixins';
+@import 'utils/Variables';
+@import 'components/animations';
+@import 'components/fonctions';
 
-@import '../../Scss/Layout/body';
-@import '../../Scss/Layout/base';
-@import '../../Scss/Layout/header';
-@import '../../Scss/Layout/section-1';
-@import '../../Scss/Layout/section-2';
-@import '../../Scss/Layout/_section-3.scss';
-@import '../../Scss/Layout/footer';
+@import 'Layout/body';
+@import 'Layout/base';
+@import 'Layout/header';
+@import 'Layout/section-1';
+@import 'Layout/section-2';
+@import 'Layout/section-3';
+@import 'Layout/footer';
 
-@import '../../Scss/Layout/header-menu';
-@import '../../Scss/Layout/menu-img\(section\)';
-@import '../../Scss/Layout/section-menu'
+@import 'Layout/header-menu';
+@import 'Layout/menu-img\(section\)';
+@import 'Layout/section-menu'

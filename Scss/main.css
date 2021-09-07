@@ -548,8 +548,8 @@ a:link {
 
 @media only screen and (min-width: 1024px) and (max-width: 1440px) {
   .section-2 li::before {
-    margin-left: -6%;
-    margin-right: 8%;
+    margin-left: -5%;
+    margin-right: 5%;
   }
 }
 
