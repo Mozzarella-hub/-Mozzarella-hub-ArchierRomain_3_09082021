@@ -363,7 +363,7 @@ a:link {
     margin-right: 5%;
   }
 }
-@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+@media only screen and (min-width: 1024px) and (max-width: 1600px) {
   .section-2 li::before {
     margin-left: -5%;
     margin-right: 5%;

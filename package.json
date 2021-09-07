@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "sass --watch Scss\main.scss:public\css"
+    "test": "sass --watch Scss/main.scss:public/css/main.css"
   },
   "author": "",
   "license": "ISC",
@@ -13,5 +13,3 @@
   }
 }
 
-
-:public\css
